@@ -1,0 +1,12 @@
+Fasttext Result
+> fast
+> Label  Precision  Recall  F-value  Total  Predict  Correct
+__label__video_dianbo  0.698883  0.928214  0.797387  Toal=5391  Pred=7160  Corr=5004
+__label__video_normal  0.917131  0.665165  0.771087  Toal=6439  Pred=4670  Corr=4283
+> Row(real), Column(predict)
+ 5004.0	387.0	
+ 2156.0	4283.0	
+Total Correct: 9287/11830=0.785038  Total predict: 0.817674  Total Recall:0.785038  Total F1:0.783072
+
+
+

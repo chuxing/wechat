@@ -1,0 +1,11 @@
+./FileProcess.py
+./process1.py
+./dataprocess.py
+./PatternMatch.py
+./mainfun.py
+./news/newdomain/do.py
+./Trie.py
+./temp/do.py
+./match_lexicon/PatternMatch.py
+./match_lexicon/mainfun.py
+./match_lexicon/Trie.py

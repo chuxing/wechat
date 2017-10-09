@@ -1,0 +1,4714 @@
+cscope 15 $HOME/newsdata/need_to_process/SS_Text_Classification-master/semi-supervised -q 0000000293 0000020742
+	@data/fenci.py
+
+1 
+impÜt
+ 
+os
+
+
+2 
+impÜt
+ 
+sys
+
+
+3 
+impÜt
+ 
+j›ba
+
+
+4 
+impÜt
+ 
+codecs
+
+
+7 
+def
+ 
+	$j›bacut
+(
+Çme
+):
+
+8 
+ä
+ = 
+codecs
+.
+	`İ’
+(
+Çme
+,'r','gb2312',
+”rÜs
+='ignore')
+
+9 
+fw
+ = 
+codecs
+.
+	`İ’
+(
+Çme
++"_new",'w','utf8')
+
+10 
+¿w£Á’û
+ 
+š
+ 
+ä
+.
+	$»adlšes
+():
+
+11 
+Ãw£Á’û
+ = ""
+
+12 
+£Á’û¥l™
+ = 
+¿w£Á’û
+.
+	`¥l™
+(" ")
+
+13 
+Ãw£Á’û
+ +ğ"".
+	$još
+(
+£Á’û¥l™
+[1:])
+
+14 
+£g_li¡
+ = 
+j›ba
+.
+	$lcut
+(
+Ãw£Á’û
+)
+
+15 
+£Á’û
+ = 
+£Á’û¥l™
+[0] + " "
+
+16 
+£Á’û
+ +ğ" ".
+	$još
+(
+£g_li¡
+)
+
+17 
+fw
+.
+	$wr™e
+(
+£Á’û
+)
+
+19 
+__Çme__
+ == '__main__':
+
+20 
+¬g
+ 
+š
+ 
+sys
+.
+¬gv
+[1:]:
+
+21 
+	$j›bacut
+(
+¬g
+)
+
+22 #Çme1 = 
+sys
+.
+¬gv
+[1]
+
+23 #Çme2 = 
+sys
+.
+¬gv
+[2]
+
+24 #j›bacut(
+Çme1
+)
+
+25 #j›bacut(
+Çme2
+)
+
+	@data/random_split.py
+
+1 #!/
+u¤
+/
+bš
+/
+’v
+ 
+pythÚ
+
+
+2 #-*- 
+codšg
+:
+utf
+-8 -*-
+
+3 #########################################################################
+#F
+Name
+: 
+¿ndom_¥l™
+.
+py
+
+
+5 #AuthÜ: 
+ËtŸn
+
+
+6 #Ma: @.
+com
+
+
+7 #C»©ed 
+Time
+: 
+MÚ
+ 08 
+May
+ 2017 03:33:24 
+PM
+ 
+CST
+
+
+8 #########################################################################
+ sys,„ªdom
+
+11 
+	g¿tio
+ = (
+sys
+.
+¬gv
+[2])
+
+13 
+fe1
+ = 
+	`İ’
+(
+sys
+.
+¬gv
+[1] + "_" + 
+	`¡r
+(
+¿tio
+), "w+")
+
+14 
+fe2
+ = 
+	`İ’
+(
+sys
+.
+¬gv
+[1] + "_" + 
+	`¡r
+(1 - 
+¿tio
+), "w+")
+
+16 
+lše
+ 
+š
+ 
+	$İ’
+(
+sys
+.
+¬gv
+[1]):
+
+17 
+lše
+ =†še.
+	`¡r
+() + "\n"
+
+18 
+¿ndom
+.
+	`¿ndom
+(è< 
+¿tio
+:
+
+19 
+fe1
+.
+	$wr™e
+(
+lše
+)
+
+21 
+fe2
+.
+	$wr™e
+(
+lše
+)
+
+23 
+fe1
+.
+	$şo£
+()
+
+24 
+fe2
+.
+	`şo£
+()
+
+	@ss_classify.py
+
+1 #!/
+bš
+/
+pythÚ
+
+
+3 
+def
+ 
+	$Œaš_şassif›r
+(
+X
+, 
+y
+):
+
+6 
+T¿šs
+ 
+a
+ 
+logi¡ic
+ 
+»g»ssiÚ
+ 
+Ú
+ 
+the
+ 
+šput
+ 
+d©a
+ 
+w™h
+  
+·¿m‘”s
+.
+
+8 
+äom
+ 
+skË¬n
+.
+lš—r_mod–
+ 
+impÜt
+ 
+Logi¡icReg»ssiÚ
+
+
+11 
+äom
+ 
+skË¬n
+.
+mod–_£ËùiÚ
+ 
+impÜt
+ 
+GridS—rchCV
+
+
+13 
+şs
+ = 
+	`Logi¡icReg»ssiÚ
+(
+³ÇÉy
+ = 'l2', 
+C
+ = 10, 
+tŞ
+=0.01)
+
+14 
+şs
+.
+	$f™
+(
+X
+, 
+y
+)
+
+15  
+şs
+
+
+19 
+def
+ 
+	$Œaš_Çive_bayes
+(
+X
+, 
+y
+):
+
+20 
+äom
+ 
+skË¬n
+.
+Çive_bayes
+ 
+impÜt
+ 
+MuÉšomŸlNB
+
+
+21 
+äom
+ 
+skË¬n
+.
+mod–_£ËùiÚ
+ 
+impÜt
+ 
+GridS—rchCV
+
+
+24 
+şs
+ = 
+	$MuÉšomŸlNB
+(
+®pha
+ = 0.01)
+
+25 
+şs
+.
+	$f™
+(
+X
+,
+y
+)
+
+26  
+şs
+
+
+29 
+def
+ 
+	$Œaš_svm
+(
+X
+, 
+y
+):
+
+30 
+äom
+ 
+skË¬n
+.
+svm
+ 
+impÜt
+ 
+Lš—rSVC
+
+
+31 
+äom
+ 
+skË¬n
+.
+mod–_£ËùiÚ
+ 
+impÜt
+ 
+GridS—rchCV
+
+
+32 
+äom
+ 
+skË¬n
+.
+ÿlib¿tiÚ
+ 
+impÜt
+ 
+C®ib¿‹dCÏssif›rCV
+
+
+34 
+svm
+ = 
+	$Lš—rSVC
+()
+
+35 
+şs
+ = 
+	`C®ib¿‹dCÏssif›rCV
+(
+svm
+, 
+m‘hod
+ = 'isotonic')
+
+36 
+şs
+.
+	$f™
+(
+X
+,
+y
+)
+
+37  
+şs
+
+
+40 
+def
+ 
+	$addUÆab–ed
+(
+uÆab–ed
+, 
+X
+,
+y
+, 
+şs_Ì
+, 
+şs_nb
+, 
+şs_svm
+, 
+¥“ch
+):
+
+41 
+yp_Ì
+ = 
+şs_Ì
+.
+	$´ediù
+(
+uÆab–ed
+.
+X
+)
+
+42 
+yp_nb
+ = 
+şs_nb
+.
+	$´ediù
+(
+uÆab–ed
+.
+X
+)
+
+43 
+yp_svm
+ = 
+şs_svm
+.
+	$´ediù
+(
+uÆab–ed
+.
+X
+)
+
+45 
+´_´oba_Ì
+ = 
+şs_Ì
+.
+	$´ediù_´oba
+(
+uÆab–ed
+.
+X
+)
+
+46 
+´_´oba_nb
+ = 
+şs_nb
+.
+	$´ediù_´oba
+(
+uÆab–ed
+.
+X
+)
+
+47 
+´_´oba_svm
+ = 
+şs_svm
+.
+	$´ediù_´oba
+(
+uÆab–ed
+.
+X
+)
+
+50 
+Ïb–s_Ì
+ = 
+¥“ch
+.
+Ë
+.
+	$šv”£_ŒªsfÜm
+(
+yp_Ì
+)
+
+51 
+Ïb–s_nb
+ = 
+¥“ch
+.
+Ë
+.
+	$šv”£_ŒªsfÜm
+(
+yp_nb
+)
+
+52 
+Ïb–s_svm
+ = 
+¥“ch
+.
+Ë
+.
+	$šv”£_ŒªsfÜm
+(
+yp_svm
+)
+
+55 
+Œaš_d©a
+, 
+Œaš_âames
+, 
+Œaš_Ïb–s
+ = 
+	$g‘Lab–edD©a
+()
+
+57 
+i
+ 
+š
+ 
+	`x¿nge
+(
+	$Ën
+(
+uÆab–ed
+.
+âames
+)):
+
+58 
+âame
+ = 
+uÆab–ed
+.
+âames
+[
+i
+]
+
+59 
+maxV®_Ì
+ = 
+	$max
+(
+´_´oba_Ì
+[
+i
+])
+
+60 
+maxIndex_Ì
+ = 
+´_´oba_Ì
+[
+i
+].
+	`tŞi¡
+().
+	`šdex
+(
+	$max
+(
+´_´oba_Ì
+[
+i
+]))
+
+61 
+maxV®_nb
+ = 
+	$max
+(
+´_´oba_nb
+[
+i
+])
+
+62 
+maxIndex_nb
+ = 
+´_´oba_nb
+[
+i
+].
+	`tŞi¡
+().
+	`šdex
+(
+	$max
+(
+´_´oba_nb
+[
+i
+]))
+
+63 
+maxV®_svm
+ = 
+	$max
+(
+´_´oba_svm
+[
+i
+])
+
+64 
+maxIndex_svm
+ = 
+´_´oba_svm
+[
+i
+].
+	`tŞi¡
+().
+	`šdex
+(
+	$max
+(
+´_´oba_svm
+[
+i
+]))
+
+66 ià(
+Ïb–s_Ì
+[
+i
+] =ğ
+Ïb–s_nb
+[i] =ğ
+Ïb–s_svm
+[i]è
+	`ªd
+ (
+maxV®_Ì
+ > 0.79èªd (
+maxV®_nb
+ > 0.75èªd (
+maxV®_svm
+ > 0.79):
+
+67 
+´št
+ "Here"
+
+68 
+Œaš_âames
+.
+	$­³nd
+(
+âame
+)
+
+69 #Œaš_Ïb–s.
+	`­³nd
+(
+Ïb–s_Ì
+[
+i
+])
+
+70 
+Œaš_Ïb–s
+.
+	$­³nd
+(
+¥“ch
+.
+Ë
+.
+şas£s_
+[
+maxIndex_Ì
+])
+
+71 
+Œaš_d©a
+.
+	$­³nd
+(
+uÆab–ed
+.
+d©a
+[
+i
+])
+
+72 #f.
+	`wr™e
+(
+uÆab–ed
+.
+âames
+[
+i
+] + "\t" + 
+Ïb–s_Ì
+[i])
+
+73 #f.
+	`wr™e
+("\n")
+
+74 #f.
+	`şo£
+()
+
+75 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+.
+‹xt
+ 
+impÜt
+ 
+TfidfVeùÜiz”
+
+
+78 
+couÁ_veù
+ = 
+	`TfidfVeùÜiz”
+(
+ª®yz”
+ = 'wÜd', 
+nÜm
+ = 'l2', 
+sublš—r_tf
+ = 
+True
+) #max_features = 7916)
+
+81 
+couÁ_veù
+ = 
+	`TfidfVeùÜiz”
+(
+ª®yz”
+ = 'wÜd', 
+nÜm
+ = 'l2', 
+sublš—r_tf
+ = 
+True
+, 
+max_ã©u»s
+ = 7916)
+
+83 
+ŒašX
+ = 
+couÁ_veù
+.
+	$f™_ŒªsfÜm
+(
+Œaš_d©a
+)
+
+84 #´šˆ"S³ech.ŒašX" + 
+	`¡r
+(
+¥“ch
+.
+ŒašX
+)
+
+85 
+äom
+ 
+skË¬n
+ 
+impÜt
+ 
+´•roûssšg
+
+
+86 
+Ë
+ = 
+´•roûssšg
+.
+	$Lab–Encod”
+()
+
+87 
+Ë
+.
+	$f™
+(
+Œaš_Ïb–s
+)
+
+88 
+rg‘_Ïb–s
+ = 
+Ë
+.
+şas£s_
+
+
+89 
+Œašy
+ = 
+¥“ch
+.
+Ë
+.
+	$ŒªsfÜm
+(
+Œaš_Ïb–s
+)
+
+91 
+şs
+ = 
+	$Œaš_şassif›r
+(
+ŒašX
+, 
+Œašy
+)
+
+92 
+´št
+ "After‡dding unlabeled dataoheraining set"
+
+93 
+	$ev®u©e
+(
+ŒašX
+, 
+Œašy
+, 
+şs
+)
+
+97 ##
+Added
+ 
+Ãwly
+##
+
+98 
+impÜt
+ 
+rfe
+
+
+99 
+râame
+ = "data/speech.tar.gz"
+
+100 
+r
+ = 
+rfe
+.
+	`İ’
+(
+râame
+, "r:gz")
+
+101 
+şass
+ 
+D©a
+: 
+·ss
+
+
+102 
+uÆab–ed
+ = 
+	$D©a
+()
+
+103 
+uÆab–ed
+.
+d©a
+ = []
+
+104 
+uÆab–ed
+.
+âames
+ = []
+
+105 
+m
+ 
+š
+ 
+r
+.
+	$g‘memb”s
+():
+
+106 "uÆab–ed" 
+š
+ 
+m
+.
+Çme
+ 
+ªd
+ ".txt" in m.name:
+
+107 
+uÆab–ed
+.
+âames
+.
+	$­³nd
+(
+m
+.
+Çme
+)
+
+108 
+uÆab–ed
+.
+d©a
+.
+	`­³nd
+(
+	$»ad_š¡ªû
+(
+r
+, 
+m
+.
+Çme
+))
+
+109 
+uÆab–ed
+.
+X
+ = 
+couÁ_veù
+.
+	$ŒªsfÜm
+(
+uÆab–ed
+.
+d©a
+)
+
+110 
+´št
+ 
+uÆab–ed
+.
+X
+.
+sh­e
+
+
+111 
+r
+.
+	$şo£
+()
+
+114 #uÆab–ed = 
+	`»ad_uÆab–ed
+(
+râame
+, 
+¥“ch
+)
+
+115 #X_‹¡ = 
+couÁ_veù
+.
+	`ŒªsfÜm
+(
+uÆab–ed
+.
+X
+)
+
+116 
+	`wr™e_´ed_kaggË_fe
+(
+uÆab–ed
+, 
+şs
+, "d©a/ss_¥“ch-´ed.csv", 
+¥“ch
+)
+
+118  
+şs
+, 
+ŒašX
+
+
+121 
+def
+ 
+	$wr™e_´ed_kaggË_fe
+(
+uÆab–ed
+, 
+şs
+, 
+outâame
+, 
+¥“ch
+):
+
+124 
+Giv’
+ 
+the
+ 
+uÆab–ed
+ 
+objeù
+, 
+şassif›r
+, 
+ouutf’ame
+, 
+ªd
+h
+¥“ch
+ object,
+
+125 
+this
+ 
+funùiÚ
+ 
+wr™e
+ 
+the
+ 
+´ediùiÚs
+ 
+of
+h
+şassif›r
+ 
+Ú
+h
+uÆab–ed
+ 
+d©a
+ 
+ªd
+
+
+126 
+wr™es
+ 
+™
+ 
+to
+ 
+the
+ 
+ouutf’ame
+. 
+The
+ 
+¥“ch
+ 
+objeù
+ 
+is
+ 
+»quœed
+Ø
+’su»
+
+
+127 
+cÚsi¡’t
+ 
+Ïb–
+ 
+Çmes
+.
+
+129 
+yp
+ = 
+şs
+.
+	$´ediù
+(
+uÆab–ed
+.
+X
+)
+
+130 
+Ïb–s
+ = 
+¥“ch
+.
+Ë
+.
+	$šv”£_ŒªsfÜm
+(
+yp
+)
+
+131 
+f
+ = 
+	`İ’
+(
+outâame
+, 'w')
+
+132 
+f
+.
+	`wr™e
+("FileIndex,Category\n")
+
+133 
+i
+ 
+š
+ 
+	`x¿nge
+(
+	$Ën
+(
+uÆab–ed
+.
+âames
+)):
+
+134 
+âame
+ = 
+uÆab–ed
+.
+âames
+[
+i
+]
+
+135 #iid = 
+	`fe_to_id
+(
+âame
+)
+
+136 
+f
+.
+	`wr™e
+(
+	`¡r
+(
+i
++1))
+
+137 
+f
+.
+	`wr™e
+(",")
+
+138 #f.
+	`wr™e
+(
+âame
+)
+
+139 #f.
+	`wr™e
+(",")
+
+140 
+f
+.
+	$wr™e
+(
+Ïb–s
+[
+i
+])
+
+141 
+f
+.
+	`wr™e
+("\n")
+
+142 
+f
+.
+	$şo£
+()
+
+145 
+def
+ 
+	$g‘Lab–edD©a
+():
+
+146 
+impÜt
+ 
+rfe
+
+
+147 
+râame
+ = "data/speech.tar.gz"
+
+148 
+r
+ = 
+rfe
+.
+	`İ’
+(
+râame
+, "r:gz")
+
+149 
+d©a
+, 
+âames
+, 
+Ïb–s
+ = 
+	`»ad_tsv
+(
+r
+, "train.tsv")
+
+150 
+r
+.
+	$şo£
+()
+
+152  
+d©a
+, 
+âames
+, 
+Ïb–s
+
+
+155 
+def
+ 
+	$»ad_tsv
+(
+r
+, 
+âame
+):
+
+156 
+memb”
+ = 
+r
+.
+	$g‘memb”
+(
+âame
+)
+
+157 
+´št
+ 
+memb”
+.
+Çme
+
+
+158 
+tf
+ = 
+r
+.
+	$exŒaùfe
+(
+memb”
+)
+
+159 
+d©a
+ = []
+
+160 
+Ïb–s
+ = []
+
+161 
+âames
+ = []
+
+162 
+lše
+ 
+š
+ 
+tf
+:
+
+163 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+164 #´šˆ
+iâame
+, ":", 
+Ïb–
+
+
+165 
+cÚ‹Á
+ = 
+	$»ad_š¡ªû
+(
+r
+, 
+iâame
+)
+
+166 
+Ïb–s
+.
+	$­³nd
+(
+Ïb–
+)
+
+167 
+âames
+.
+	$­³nd
+(
+iâame
+)
+
+168 
+d©a
+.
+	$­³nd
+(
+cÚ‹Á
+)
+
+169  
+d©a
+, 
+âames
+, 
+Ïb–s
+
+
+172 
+def
+ 
+	$»ad_š¡ªû
+(
+r
+, 
+iâame
+):
+
+173 
+š¡
+ = 
+r
+.
+	$g‘memb”
+(
+iâame
+)
+
+174 
+ife
+ = 
+r
+.
+	$exŒaùfe
+(
+š¡
+)
+
+175 
+cÚ‹Á
+ = 
+ife
+.
+	`»ad
+().
+	$¡r
+()
+
+176  
+cÚ‹Á
+
+
+178 
+def
+ 
+	$ev®u©e
+(
+X
+, 
+yt
+, 
+şs
+):
+
+180 
+äom
+ 
+skË¬n
+ 
+impÜt
+ 
+m‘rics
+
+
+181 
+yp
+ = 
+şs
+.
+	$´ediù
+(
+X
+)
+
+182 
+acc
+ = 
+m‘rics
+.
+	$accu¿cy_scÜe
+(
+yt
+, 
+yp
+)
+
+183 
+´št
+ " Accu¿cy", 
+acc
+
+
+	@ss_news.py
+
+1 #!/
+bš
+/
+pythÚ
+
+
+3 
+def
+ 
+	$»ad_fes
+(
+râame
+):
+
+5 
+The
+ 
+»tuºed
+ 
+objeù
+ 
+cÚšs
+ 
+v¬ious
+ 
+f›lds
+ 
+th©
+ 
+¡Üe
+ 
+the
+ 
+d©a
+, 
+such
+ 
+as
+:
+
+7 
+Œaš_d©a
+,
+dev_d©a
+: 
+¬¿y
+ 
+of
+ 
+	$docum’ts
+ (
+¬¿y
+ 
+of
+ 
+wÜds
+)
+
+8 
+Œaš_âames
+,
+dev_âames
+: 
+li¡
+ 
+of
+ 
+f’ames
+ oà
+the
+ 
+	$doccum’ts
+ (
+§me
+ 
+Ëngth
+ 
+as
+ 
+d©a
+)
+
+9 
+Œaš_Ïb–s
+,
+dev_Ïb–s
+: 
+the
+ 
+Œue
+ 
+¡ršg
+ 
+Ïb–
+ 
+—ch
+ 
+	$docum’t
+ (
+§me
+ 
+Ëngth
+ 
+as
+ 
+d©a
+)
+
+11 
+The
+ 
+d©a
+ 
+is
+ 
+®so
+ 
+´•roûs£d
+ 
+u£
+ 
+w™h
+ 
+scik™
+-
+Ë¬n
+, 
+as
+:
+
+13 
+couÁ_vec
+: 
+CouÁVeùÜiz”
+ 
+u£d
+ 
+to
+ 
+´oûss
+ 
+the
+ 
+	$d©a
+ (
+»­¶iÿtiÚ
+ 
+Ú
+ 
+Ãw
+ 
+d©a
+)
+
+14 
+ŒašX
+,
+devX
+: 
+¬¿y
+ 
+of
+ 
+veùÜs
+ 
+»´e£Ášg
+ 
+Bags
+ oà
+WÜds
+, 
+i
+.
+e
+. 
+docum’ts
+ 
+´oûs£d
+ 
+through
+ 
+the
+ 
+veùÜiz”
+
+
+15 
+Ë
+: 
+Lab–Encod”
+, 
+i
+.
+e
+. 
+a
+ 
+m­³r
+ 
+äom
+ 
+¡ršg
+ 
+Ïb–s
+ 
+to
+ 
+	$šts
+ (
+¡Üed
+ 
+»­¶iÿtiÚ
+)
+
+16 
+rg‘_Ïb–s
+: 
+Li¡
+ 
+of
+ 
+	$Ïb–s
+ (
+§me
+ 
+Üd”
+ 
+as
+ 
+u£d
+ 
+š
+ 
+Ë
+)
+
+17 
+Œašy
+,
+devy
+: 
+¬¿y
+ 
+of
+ 
+Ïb–s
+, 
+Úe
+ 
+—ch
+ 
+docum’t
+
+
+19 
+impÜt
+ 
+rfe
+
+
+20 
+r
+ = 
+rfe
+.
+	`İ’
+(
+râame
+, "r:gz")
+
+21 
+şass
+ 
+D©a
+: 
+·ss
+
+
+22 
+Ãws
+ = 
+	$D©a
+()
+
+23 
+´št
+ "--rain data"
+
+24 
+Ãws
+.
+Œaš_d©a
+,‚ews.
+Œaš_âames
+,‚ews.
+Œaš_Ïb–s
+ = 
+	`»ad_tsv
+(
+r
+, "train.tsv")
+
+25 
+´št
+ 
+	$Ën
+(
+Ãws
+.
+Œaš_d©a
+)
+
+26 
+´št
+ "-- dev data"
+
+27 
+Ãws
+.
+dev_d©a
+,‚ews.
+dev_âames
+,‚ews.
+dev_Ïb–s
+ = 
+	`»ad_tsv
+(
+r
+, "dev.tsv")
+
+28 
+´št
+ 
+	$Ën
+(
+Ãws
+.
+dev_d©a
+)
+
+29 
+´št
+ "--ransforming data‡nd†abels"
+
+30 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+.
+‹xt
+ 
+impÜt
+ 
+TfidfVeùÜiz”
+
+
+31 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+.
+‹xt
+ 
+impÜt
+ 
+CouÁVeùÜiz”
+
+
+32 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+ 
+impÜt
+ 
+DiùVeùÜiz”
+
+
+34 
+Ãws
+.
+couÁ_veù
+ = 
+	`TfidfVeùÜiz”
+(
+ª®yz”
+ = 'wÜd', 
+nÜm
+ = 'l2', 
+sublš—r_tf
+ = 
+True
+è#TfidfVeùÜiz”×Çlyz” = 'wÜd', 
+¡İ_wÜds
+ = 'english')
+
+35 
+Ãws
+.
+ŒašX
+ =‚ews.
+couÁ_veù
+.
+	$f™_ŒªsfÜm
+(
+Ãws
+.
+Œaš_d©a
+)
+
+36 #´šˆ"Ãws.ŒašX" + 
+	`¡r
+(
+Ãws
+.
+ŒašX
+)
+
+37 
+Ãws
+.
+devX
+ =‚ews.
+couÁ_veù
+.
+	$ŒªsfÜm
+(
+Ãws
+.
+dev_d©a
+)
+
+38 
+äom
+ 
+skË¬n
+ 
+impÜt
+ 
+´•roûssšg
+
+
+39 
+Ãws
+.
+Ë
+ = 
+´•roûssšg
+.
+	$Lab–Encod”
+()
+
+40 
+Ãws
+.
+Ë
+.
+	$f™
+(
+Ãws
+.
+Œaš_Ïb–s
+)
+
+41 
+Ãws
+.
+rg‘_Ïb–s
+ =‚ews.
+Ë
+.
+şas£s_
+
+
+42 
+Ãws
+.
+Œašy
+ =‚ews.
+Ë
+.
+	$ŒªsfÜm
+(
+Ãws
+.
+Œaš_Ïb–s
+)
+
+43 
+Ãws
+.
+devy
+ =‚ews.
+Ë
+.
+	$ŒªsfÜm
+(
+Ãws
+.
+dev_Ïb–s
+)
+
+44 
+r
+.
+	$şo£
+()
+
+45  
+Ãws
+
+
+47 
+def
+ 
+	$»ad_uÆab–ed
+(
+râame
+, 
+Ãws
+):
+
+50 
+The
+ 
+»tuºed
+ 
+objeù
+ 
+cÚšs
+ 
+th»e
+ 
+f›lds
+ 
+th©
+ 
+»´e£Á
+ 
+the
+ 
+uÆab–ed
+ 
+d©a
+.
+
+52 
+d©a
+: 
+docum’ts
+, 
+»´e£Áed
+ 
+as
+ 
+£qu’û
+ 
+of
+ 
+wÜds
+
+
+53 
+âames
+: 
+li¡
+ 
+of
+ 
+f’ames
+, 
+Úe
+ 
+—ch
+ 
+docum’t
+
+
+54 
+X
+: 
+bag
+ 
+of
+ 
+wÜd
+ 
+veùÜ
+ 
+—ch
+ 
+docum’t
+, 
+usšg
+ 
+the
+ 
+Ãws
+.
+veùÜiz”
+
+
+56 
+impÜt
+ 
+rfe
+
+
+57 
+r
+ = 
+rfe
+.
+	`İ’
+(
+râame
+, "r:gz")
+
+58 
+şass
+ 
+D©a
+: 
+·ss
+
+
+59 
+uÆab–ed
+ = 
+	$D©a
+()
+
+60 
+uÆab–ed
+.
+d©a
+ = []
+
+61 
+uÆab–ed
+.
+âames
+ = []
+
+62 
+m
+ 
+š
+ 
+r
+.
+	$g‘memb”s
+():
+
+63 "uÆab–ed" 
+š
+ 
+m
+.
+Çme
+ 
+ªd
+ ".txt" in m.name:
+
+64 
+uÆab–ed
+.
+âames
+.
+	$­³nd
+(
+m
+.
+Çme
+)
+
+65 
+uÆab–ed
+.
+d©a
+.
+	`­³nd
+(
+	$»ad_š¡ªû
+(
+r
+, 
+m
+.
+Çme
+))
+
+66 
+uÆab–ed
+.
+X
+ = 
+Ãws
+.
+couÁ_veù
+.
+	$ŒªsfÜm
+(
+uÆab–ed
+.
+d©a
+)
+
+67 
+´št
+ 
+uÆab–ed
+.
+X
+.
+sh­e
+
+
+68 
+r
+.
+	$şo£
+()
+
+69  
+uÆab–ed
+
+
+71 
+def
+ 
+	$»ad_tsv
+(
+r
+, 
+âame
+):
+
+72 
+memb”
+ = 
+r
+.
+	$g‘memb”
+(
+âame
+)
+
+73 
+´št
+ 
+memb”
+.
+Çme
+
+
+74 
+tf
+ = 
+r
+.
+	$exŒaùfe
+(
+memb”
+)
+
+75 
+d©a
+ = []
+
+76 
+Ïb–s
+ = []
+
+77 
+âames
+ = []
+
+78 
+lše
+ 
+š
+ 
+tf
+:
+
+79 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+80 #´šˆ
+iâame
+, ":", 
+Ïb–
+
+
+81 
+cÚ‹Á
+ = 
+	$»ad_š¡ªû
+(
+r
+, 
+iâame
+)
+
+82 
+Ïb–s
+.
+	$­³nd
+(
+Ïb–
+)
+
+83 
+âames
+.
+	$­³nd
+(
+iâame
+)
+
+84 
+d©a
+.
+	$­³nd
+(
+cÚ‹Á
+)
+
+85  
+d©a
+, 
+âames
+, 
+Ïb–s
+
+
+88 
+def
+ 
+	$fe_to_id
+(
+âame
+):
+
+89  
+	`¡r
+((
+âame
+.
+	`»¶aû
+("unlabeled/","").replace("labeled/","").replace(".txt","")))
+
+91 
+def
+ 
+	$wr™e_gŞd_kaggË_fe
+(
+tsvfe
+, 
+outâame
+):
+
+94 
+You
+ 
+wl
+ 
+nÙ
+ 
+be
+ 
+abË
+ 
+to
+ 
+run
+ 
+this
+ 
+code
+, 
+sšû
+ 
+the
+ 
+tsvfe
+ 
+is
+‚ot
+
+95 
+acûssibË
+ 
+to
+ 
+	`you
+ (
+™
+ 
+is
+ 
+the
+ 
+‹¡
+ 
+Ïb–s
+).
+
+97 
+f
+ = 
+	`İ’
+(
+outâame
+, 'w')
+
+98 
+f
+.
+	`wr™e
+("FileIndex,Category\n")
+
+99 
+i
+ = 0
+
+100 
+w™h
+ 
+	`İ’
+(
+tsvfe
+, 'r'è
+as
+ 
+tf
+:
+
+101 
+lše
+ 
+š
+ 
+tf
+:
+
+102 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+103 #iid = 
+	`fe_to_id
+(
+iâame
+)
+
+104 
+i
+ += 1
+
+105 
+f
+.
+	`wr™e
+(
+	$¡r
+(
+i
+))
+
+106 
+f
+.
+	`wr™e
+(",")
+
+107 #f.
+	`wr™e
+(
+iâame
+)
+
+108 #f.
+	`wr™e
+(",")
+
+109 
+f
+.
+	$wr™e
+(
+Ïb–
+)
+
+110 
+f
+.
+	`wr™e
+("\n")
+
+111 
+f
+.
+	$şo£
+()
+
+113 
+def
+ 
+	$wr™e_basic_kaggË_fe
+(
+tsvfe
+, 
+outâame
+):
+
+116 
+This
+ 
+ba£lše
+ 
+´ediùs
+ 
+OBAMA_PRIMARY2008
+ 
+®l
+ 
+the
+ 
+š¡ªûs
+.
+
+117 
+You
+ 
+wl
+ 
+nÙ
+ 
+be
+ 
+abË
+ 
+to
+ 
+run
+ 
+this
+ 
+code
+, 
+sšû
+ 
+the
+ 
+tsvfe
+ 
+is
+‚ot
+
+118 
+acûssibË
+ 
+to
+ 
+	`you
+ (
+™
+ 
+is
+ 
+the
+ 
+‹¡
+ 
+Ïb–s
+).
+
+120 
+f
+ = 
+	`İ’
+(
+outâame
+, 'w')
+
+121 
+f
+.
+	`wr™e
+("FileIndex,Category\n")
+
+122 
+i
+ = 0
+
+123 
+w™h
+ 
+	`İ’
+(
+tsvfe
+, 'r'è
+as
+ 
+tf
+:
+
+124 
+lše
+ 
+š
+ 
+tf
+:
+
+125 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+126 
+i
+ += 1
+
+127 
+f
+.
+	`wr™e
+(
+	$¡r
+(
+i
+))
+
+128 
+f
+.
+	`wr™e
+(",")
+
+129 
+f
+.
+	`wr™e
+("OBAMA_PRIMARY2008")
+
+130 
+f
+.
+	`wr™e
+("\n")
+
+131 
+f
+.
+	$şo£
+()
+
+133 
+def
+ 
+	$»ad_š¡ªû
+(
+r
+, 
+iâame
+):
+
+134 
+š¡
+ = 
+r
+.
+	$g‘memb”
+(
+iâame
+)
+
+135 
+ife
+ = 
+r
+.
+	$exŒaùfe
+(
+š¡
+)
+
+136 
+cÚ‹Á
+ = 
+ife
+.
+	`»ad
+().
+	$¡r
+()
+
+137  
+cÚ‹Á
+
+
+141 
+def
+ 
+	$¶Ù_g¿phs
+(
+x
+, 
+y
+, 
+funùiÚ
+):
+
+142 
+impÜt
+ 
+m©¶Ùlib
+.
+py¶Ù
+ 
+as
+ 
+¶t
+
+
+143 
+¶t
+.
+	`¶Ù
+(
+x
+, 
+y
+, 
+cŞÜ
+ = 'blue', 
+lšewidth
+ = 3)
+
+144 
+¶t
+.
+	$axis
+([0, 6, 0, 20])
+
+145 
+¶t
+.
+	$show
+()
+
+147 
+__Çme__
+ == "__main__":
+
+148 
+´št
+ "Reading data"
+
+149 
+râame
+ = "data/news.tar.gz"
+
+150 
+Ãws
+ = 
+	$»ad_fes
+(
+râame
+)
+
+151 
+´št
+ "Training classifier"
+
+152 
+impÜt
+ 
+ss_şassify
+
+
+153 
+şs
+ = 
+ss_şassify
+.
+	$Œaš_şassif›r
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+)
+
+154 
+şs_nb
+ = 
+ss_şassify
+.
+	$Œaš_Çive_bayes
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+)
+
+155 
+şs_svm
+ = 
+ss_şassify
+.
+	$Œaš_svm
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+)
+
+157 
+´št
+ "Evaluating"
+
+158 
+ss_şassify
+.
+	$ev®u©e
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+, 
+şs
+)
+
+159 
+ss_şassify
+.
+	$ev®u©e
+(
+Ãws
+.
+devX
+,‚ews.
+devy
+, 
+şs
+)
+
+161 
+´št
+ "------------------------------------------------------------------------------------------"
+
+162 
+ss_şassify
+.
+	$ev®u©e
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+, 
+şs_nb
+)
+
+163 
+ss_şassify
+.
+	$ev®u©e
+(
+Ãws
+.
+devX
+,‚ews.
+devy
+, 
+şs_nb
+)
+
+165 
+´št
+ "------------------------------------------------------------------------------------------"
+
+166 
+ss_şassify
+.
+	$ev®u©e
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+, 
+şs_svm
+)
+
+167 
+ss_şassify
+.
+	$ev®u©e
+(
+Ãws
+.
+devX
+,‚ews.
+devy
+, 
+şs_svm
+)
+
+170 
+´št
+ "Reading unlabeled data"
+
+171 
+uÆab–ed
+ = 
+	$»ad_uÆab–ed
+(
+râame
+, 
+Ãws
+)
+
+173 #Sem˜
+Su³rvi£d
+:
+
+174 
+şs_uÆab–ed
+, 
+¶Ù_ŒašX
+ = 
+ss_şassify
+.
+	$addUÆab–ed
+(
+uÆab–ed
+, 
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+, 
+şs
+, 
+şs_nb
+, 
+şs_svm
+,‚ews)
+
+177 #ss_şassify.
+	`ev®u©e
+(
+Ãws
+.
+devX
+,‚ews.
+devy
+, 
+şs_uÆab–ed
+)
+
+180 #wr™e_´ed_kaggË_fe(
+uÆab–ed
+, 
+şs_uÆab–ed
+, "d©a/ss_Ãws-´ed.csv", 
+Ãws
+)
+
+182 #impÜˆ
+m©¶Ùlib
+.
+py¶Ù
+ 
+as
+ 
+¶t
+
+
+183 #¶t.
+	`¶Ù
+(
+Ãws
+.
+ŒašX
+,‚ews.
+Œašy
+, 
+cŞÜ
+ = 'blue', 
+lšewidth
+ = 3)
+
+185 #You 
+ÿn
+'t„unhis since you do‚ot haveherue†abels
+
+	@ss_speech.py
+
+1 #!/
+bš
+/
+pythÚ
+
+
+3 
+def
+ 
+	$»ad_fes
+(
+râame
+):
+
+5 
+The
+ 
+»tuºed
+ 
+objeù
+ 
+cÚšs
+ 
+v¬ious
+ 
+f›lds
+ 
+th©
+ 
+¡Üe
+ 
+the
+ 
+d©a
+, 
+such
+ 
+as
+:
+
+7 
+Œaš_d©a
+,
+dev_d©a
+: 
+¬¿y
+ 
+of
+ 
+	$docum’ts
+ (
+¬¿y
+ 
+of
+ 
+wÜds
+)
+
+8 
+Œaš_âames
+,
+dev_âames
+: 
+li¡
+ 
+of
+ 
+f’ames
+ oà
+the
+ 
+	$doccum’ts
+ (
+§me
+ 
+Ëngth
+ 
+as
+ 
+d©a
+)
+
+9 
+Œaš_Ïb–s
+,
+dev_Ïb–s
+: 
+the
+ 
+Œue
+ 
+¡ršg
+ 
+Ïb–
+ 
+—ch
+ 
+	$docum’t
+ (
+§me
+ 
+Ëngth
+ 
+as
+ 
+d©a
+)
+
+11 
+The
+ 
+d©a
+ 
+is
+ 
+®so
+ 
+´•roûs£d
+ 
+u£
+ 
+w™h
+ 
+scik™
+-
+Ë¬n
+, 
+as
+:
+
+13 
+couÁ_vec
+: 
+CouÁVeùÜiz”
+ 
+u£d
+ 
+to
+ 
+´oûss
+ 
+the
+ 
+	$d©a
+ (
+»­¶iÿtiÚ
+ 
+Ú
+ 
+Ãw
+ 
+d©a
+)
+
+14 
+ŒašX
+,
+devX
+: 
+¬¿y
+ 
+of
+ 
+veùÜs
+ 
+»´e£Ášg
+ 
+Bags
+ oà
+WÜds
+, 
+i
+.
+e
+. 
+docum’ts
+ 
+´oûs£d
+ 
+through
+ 
+the
+ 
+veùÜiz”
+
+
+15 
+Ë
+: 
+Lab–Encod”
+, 
+i
+.
+e
+. 
+a
+ 
+m­³r
+ 
+äom
+ 
+¡ršg
+ 
+Ïb–s
+ 
+to
+ 
+	$šts
+ (
+¡Üed
+ 
+»­¶iÿtiÚ
+)
+
+16 
+rg‘_Ïb–s
+: 
+Li¡
+ 
+of
+ 
+	$Ïb–s
+ (
+§me
+ 
+Üd”
+ 
+as
+ 
+u£d
+ 
+š
+ 
+Ë
+)
+
+17 
+Œašy
+,
+devy
+: 
+¬¿y
+ 
+of
+ 
+Ïb–s
+, 
+Úe
+ 
+—ch
+ 
+docum’t
+
+
+19 
+impÜt
+ 
+rfe
+
+
+20 
+r
+ = 
+rfe
+.
+	`İ’
+(
+râame
+, "r:gz")
+
+21 
+şass
+ 
+D©a
+: 
+·ss
+
+
+22 
+¥“ch
+ = 
+	$D©a
+()
+
+23 
+´št
+ "--rain data"
+
+24 
+¥“ch
+.
+Œaš_d©a
+, s³ech.
+Œaš_âames
+, s³ech.
+Œaš_Ïb–s
+ = 
+	`»ad_tsv
+(
+r
+, "train.tsv")
+
+25 
+´št
+ 
+	$Ën
+(
+¥“ch
+.
+Œaš_d©a
+)
+
+26 
+´št
+ "-- dev data"
+
+27 
+¥“ch
+.
+dev_d©a
+, s³ech.
+dev_âames
+, s³ech.
+dev_Ïb–s
+ = 
+	`»ad_tsv
+(
+r
+, "dev.tsv")
+
+28 
+´št
+ 
+	$Ën
+(
+¥“ch
+.
+dev_d©a
+)
+
+29 
+´št
+ "--ransforming data‡nd†abels"
+
+30 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+.
+‹xt
+ 
+impÜt
+ 
+TfidfVeùÜiz”
+
+
+31 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+.
+‹xt
+ 
+impÜt
+ 
+CouÁVeùÜiz”
+
+
+32 
+äom
+ 
+skË¬n
+.
+ã©u»_exŒaùiÚ
+ 
+impÜt
+ 
+DiùVeùÜiz”
+
+
+34 
+¥“ch
+.
+couÁ_veù
+ = 
+	`TfidfVeùÜiz”
+(
+ª®yz”
+ = 'wÜd', 
+nÜm
+ = 'l2', 
+sublš—r_tf
+ = 
+True
+è#TfidfVeùÜiz”×Çlyz” = 'wÜd', 
+¡İ_wÜds
+ = 'english')
+
+35 
+¥“ch
+.
+ŒašX
+ = s³ech.
+couÁ_veù
+.
+	$f™_ŒªsfÜm
+(
+¥“ch
+.
+Œaš_d©a
+)
+
+36 #´šˆ"S³ech.ŒašX" + 
+	`¡r
+(
+¥“ch
+.
+ŒašX
+)
+
+37 
+¥“ch
+.
+devX
+ = s³ech.
+couÁ_veù
+.
+	$ŒªsfÜm
+(
+¥“ch
+.
+dev_d©a
+)
+
+38 
+äom
+ 
+skË¬n
+ 
+impÜt
+ 
+´•roûssšg
+
+
+39 
+¥“ch
+.
+Ë
+ = 
+´•roûssšg
+.
+	$Lab–Encod”
+()
+
+40 
+¥“ch
+.
+Ë
+.
+	$f™
+(
+¥“ch
+.
+Œaš_Ïb–s
+)
+
+41 
+¥“ch
+.
+rg‘_Ïb–s
+ = s³ech.
+Ë
+.
+şas£s_
+
+
+42 
+¥“ch
+.
+Œašy
+ = s³ech.
+Ë
+.
+	$ŒªsfÜm
+(
+¥“ch
+.
+Œaš_Ïb–s
+)
+
+43 
+¥“ch
+.
+devy
+ = s³ech.
+Ë
+.
+	$ŒªsfÜm
+(
+¥“ch
+.
+dev_Ïb–s
+)
+
+44 
+r
+.
+	$şo£
+()
+
+45  
+¥“ch
+
+
+47 
+def
+ 
+	$»ad_uÆab–ed
+(
+râame
+, 
+¥“ch
+):
+
+50 
+The
+ 
+»tuºed
+ 
+objeù
+ 
+cÚšs
+ 
+th»e
+ 
+f›lds
+ 
+th©
+ 
+»´e£Á
+ 
+the
+ 
+uÆab–ed
+ 
+d©a
+.
+
+52 
+d©a
+: 
+docum’ts
+, 
+»´e£Áed
+ 
+as
+ 
+£qu’û
+ 
+of
+ 
+wÜds
+
+
+53 
+âames
+: 
+li¡
+ 
+of
+ 
+f’ames
+, 
+Úe
+ 
+—ch
+ 
+docum’t
+
+
+54 
+X
+: 
+bag
+ 
+of
+ 
+wÜd
+ 
+veùÜ
+ 
+—ch
+ 
+docum’t
+, 
+usšg
+ 
+the
+ 
+¥“ch
+.
+veùÜiz”
+
+
+56 
+impÜt
+ 
+rfe
+
+
+57 
+r
+ = 
+rfe
+.
+	`İ’
+(
+râame
+, "r:gz")
+
+58 
+şass
+ 
+D©a
+: 
+·ss
+
+
+59 
+uÆab–ed
+ = 
+	$D©a
+()
+
+60 
+uÆab–ed
+.
+d©a
+ = []
+
+61 
+uÆab–ed
+.
+âames
+ = []
+
+62 
+m
+ 
+š
+ 
+r
+.
+	$g‘memb”s
+():
+
+63 "uÆab–ed" 
+š
+ 
+m
+.
+Çme
+ 
+ªd
+ ".txt" in m.name:
+
+64 
+uÆab–ed
+.
+âames
+.
+	$­³nd
+(
+m
+.
+Çme
+)
+
+65 
+uÆab–ed
+.
+d©a
+.
+	`­³nd
+(
+	$»ad_š¡ªû
+(
+r
+, 
+m
+.
+Çme
+))
+
+66 
+uÆab–ed
+.
+X
+ = 
+¥“ch
+.
+couÁ_veù
+.
+	$ŒªsfÜm
+(
+uÆab–ed
+.
+d©a
+)
+
+67 
+´št
+ 
+uÆab–ed
+.
+X
+.
+sh­e
+
+
+68 
+r
+.
+	$şo£
+()
+
+69  
+uÆab–ed
+
+
+71 
+def
+ 
+	$»ad_tsv
+(
+r
+, 
+âame
+):
+
+72 
+memb”
+ = 
+r
+.
+	$g‘memb”
+(
+âame
+)
+
+73 
+´št
+ 
+memb”
+.
+Çme
+
+
+74 
+tf
+ = 
+r
+.
+	$exŒaùfe
+(
+memb”
+)
+
+75 
+d©a
+ = []
+
+76 
+Ïb–s
+ = []
+
+77 
+âames
+ = []
+
+78 
+lše
+ 
+š
+ 
+tf
+:
+
+79 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+80 #´šˆ
+iâame
+, ":", 
+Ïb–
+
+
+81 
+cÚ‹Á
+ = 
+	$»ad_š¡ªû
+(
+r
+, 
+iâame
+)
+
+82 
+Ïb–s
+.
+	$­³nd
+(
+Ïb–
+)
+
+83 
+âames
+.
+	$­³nd
+(
+iâame
+)
+
+84 
+d©a
+.
+	$­³nd
+(
+cÚ‹Á
+)
+
+85  
+d©a
+, 
+âames
+, 
+Ïb–s
+
+
+88 
+def
+ 
+	$fe_to_id
+(
+âame
+):
+
+89  
+	`¡r
+((
+âame
+.
+	`»¶aû
+("unlabeled/","").replace("labeled/","").replace(".txt","")))
+
+91 
+def
+ 
+	$wr™e_gŞd_kaggË_fe
+(
+tsvfe
+, 
+outâame
+):
+
+94 
+You
+ 
+wl
+ 
+nÙ
+ 
+be
+ 
+abË
+ 
+to
+ 
+run
+ 
+this
+ 
+code
+, 
+sšû
+ 
+the
+ 
+tsvfe
+ 
+is
+‚ot
+
+95 
+acûssibË
+ 
+to
+ 
+	`you
+ (
+™
+ 
+is
+ 
+the
+ 
+‹¡
+ 
+Ïb–s
+).
+
+97 
+f
+ = 
+	`İ’
+(
+outâame
+, 'w')
+
+98 
+f
+.
+	`wr™e
+("FileIndex,Category\n")
+
+99 
+i
+ = 0
+
+100 
+w™h
+ 
+	`İ’
+(
+tsvfe
+, 'r'è
+as
+ 
+tf
+:
+
+101 
+lše
+ 
+š
+ 
+tf
+:
+
+102 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+103 #iid = 
+	`fe_to_id
+(
+iâame
+)
+
+104 
+i
+ += 1
+
+105 
+f
+.
+	`wr™e
+(
+	$¡r
+(
+i
+))
+
+106 
+f
+.
+	`wr™e
+(",")
+
+107 #f.
+	`wr™e
+(
+iâame
+)
+
+108 #f.
+	`wr™e
+(",")
+
+109 
+f
+.
+	$wr™e
+(
+Ïb–
+)
+
+110 
+f
+.
+	`wr™e
+("\n")
+
+111 
+f
+.
+	$şo£
+()
+
+113 
+def
+ 
+	$wr™e_basic_kaggË_fe
+(
+tsvfe
+, 
+outâame
+):
+
+116 
+This
+ 
+ba£lše
+ 
+´ediùs
+ 
+OBAMA_PRIMARY2008
+ 
+®l
+ 
+the
+ 
+š¡ªûs
+.
+
+117 
+You
+ 
+wl
+ 
+nÙ
+ 
+be
+ 
+abË
+ 
+to
+ 
+run
+ 
+this
+ 
+code
+, 
+sšû
+ 
+the
+ 
+tsvfe
+ 
+is
+‚ot
+
+118 
+acûssibË
+ 
+to
+ 
+	`you
+ (
+™
+ 
+is
+ 
+the
+ 
+‹¡
+ 
+Ïb–s
+).
+
+120 
+f
+ = 
+	`İ’
+(
+outâame
+, 'w')
+
+121 
+f
+.
+	`wr™e
+("FileIndex,Category\n")
+
+122 
+i
+ = 0
+
+123 
+w™h
+ 
+	`İ’
+(
+tsvfe
+, 'r'è
+as
+ 
+tf
+:
+
+124 
+lše
+ 
+š
+ 
+tf
+:
+
+125 (
+iâame
+,
+Ïb–
+èğ
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t")
+
+126 
+i
+ += 1
+
+127 
+f
+.
+	`wr™e
+(
+	$¡r
+(
+i
+))
+
+128 
+f
+.
+	`wr™e
+(",")
+
+129 
+f
+.
+	`wr™e
+("OBAMA_PRIMARY2008")
+
+130 
+f
+.
+	`wr™e
+("\n")
+
+131 
+f
+.
+	$şo£
+()
+
+133 
+def
+ 
+	$»ad_š¡ªû
+(
+r
+, 
+iâame
+):
+
+134 
+š¡
+ = 
+r
+.
+	$g‘memb”
+(
+iâame
+)
+
+135 
+ife
+ = 
+r
+.
+	$exŒaùfe
+(
+š¡
+)
+
+136 
+cÚ‹Á
+ = 
+ife
+.
+	`»ad
+().
+	$¡r
+()
+
+137  
+cÚ‹Á
+
+
+141 
+def
+ 
+	$¶Ù_g¿phs
+(
+x
+, 
+y
+, 
+funùiÚ
+):
+
+142 
+impÜt
+ 
+m©¶Ùlib
+.
+py¶Ù
+ 
+as
+ 
+¶t
+
+
+143 
+¶t
+.
+	`¶Ù
+(
+x
+, 
+y
+, 
+cŞÜ
+ = 'blue', 
+lšewidth
+ = 3)
+
+144 
+¶t
+.
+	$axis
+([0, 6, 0, 20])
+
+145 
+¶t
+.
+	$show
+()
+
+147 
+__Çme__
+ == "__main__":
+
+148 
+´št
+ "Reading data"
+
+149 
+râame
+ = "data/speech.tar.gz"
+
+150 
+¥“ch
+ = 
+	$»ad_fes
+(
+râame
+)
+
+151 
+´št
+ "Training classifier"
+
+152 
+impÜt
+ 
+ss_şassify
+
+
+153 
+şs
+ = 
+ss_şassify
+.
+	$Œaš_şassif›r
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+)
+
+154 
+şs_nb
+ = 
+ss_şassify
+.
+	$Œaš_Çive_bayes
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+)
+
+155 
+şs_svm
+ = 
+ss_şassify
+.
+	$Œaš_svm
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+)
+
+157 
+´št
+ "Evaluating"
+
+158 
+ss_şassify
+.
+	$ev®u©e
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+, 
+şs
+)
+
+159 
+ss_şassify
+.
+	$ev®u©e
+(
+¥“ch
+.
+devX
+, s³ech.
+devy
+, 
+şs
+)
+
+161 
+´št
+ "------------------------------------------------------------------------------------------"
+
+162 
+ss_şassify
+.
+	$ev®u©e
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+, 
+şs_nb
+)
+
+163 
+ss_şassify
+.
+	$ev®u©e
+(
+¥“ch
+.
+devX
+, s³ech.
+devy
+, 
+şs_nb
+)
+
+165 
+´št
+ "------------------------------------------------------------------------------------------"
+
+166 
+ss_şassify
+.
+	$ev®u©e
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+, 
+şs_svm
+)
+
+167 
+ss_şassify
+.
+	$ev®u©e
+(
+¥“ch
+.
+devX
+, s³ech.
+devy
+, 
+şs_svm
+)
+
+170 
+´št
+ "Reading unlabeled data"
+
+171 
+uÆab–ed
+ = 
+	$»ad_uÆab–ed
+(
+râame
+, 
+¥“ch
+)
+
+173 #Sem˜
+Su³rvi£d
+:
+
+174 
+şs_uÆab–ed
+, 
+¶Ù_ŒašX
+ = 
+ss_şassify
+.
+	$addUÆab–ed
+(
+uÆab–ed
+, 
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+, 
+şs
+, 
+şs_nb
+, 
+şs_svm
+, speech)
+
+177 #ss_şassify.
+	`ev®u©e
+(
+¥“ch
+.
+devX
+, s³ech.
+devy
+, 
+şs_uÆab–ed
+)
+
+180 #wr™e_´ed_kaggË_fe(
+uÆab–ed
+, 
+şs_uÆab–ed
+, "d©a/ss_¥“ch-´ed.csv", 
+¥“ch
+)
+
+182 #impÜˆ
+m©¶Ùlib
+.
+py¶Ù
+ 
+as
+ 
+¶t
+
+
+183 #¶t.
+	`¶Ù
+(
+¥“ch
+.
+ŒašX
+, s³ech.
+Œašy
+, 
+cŞÜ
+ = 'blue', 
+lšewidth
+ = 3)
+
+185 #You 
+ÿn
+'t„unhis since you do‚ot haveherue†abels
+
+	@
+1
+.
+0
+5
+74
+data/fenci.py
+data/random_split.py
+ss_classify.py
+ss_news.py
+ss_speech.py

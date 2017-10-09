@@ -1,0 +1,16 @@
+Fasttext Result
+> fast
+> Label  Precision  Recall  F-value  Total  Predict  Correct
+__label__remind  0.465084  1.000000  0.634890  Toal=333  Pred=716  Corr=333
+__label__news  0.980821  0.998820  0.989739  Toal=7629  Pred=7769  Corr=7620
+__label__music  0.999837  0.943946  0.971088  Toal=45545  Pred=42999  Corr=42992
+__label__weather  0.446605  1.000000  0.617452  Toal=1631  Pred=3652  Corr=1631
+> Row(real), Column(predict)
+ 333.0	0.0	0.0	0.0	
+ 0.0	7620.0	7.0	2.0	
+ 383.0	149.0	42992.0	2019.0	
+ 0.0	0.0	0.0	1631.0	
+Total Correct: 52576/55138=0.953535  Total predict: 0.977612  Total Recall:0.953535  Total F1:0.961177
+
+
+

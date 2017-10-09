@@ -1,0 +1,72 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CalibratedClassifierCV	ss_classify.py	/^	from sklearn.calibration import CalibratedClassifierCV$/;"	i
+CountVectorizer	ss_news.py	/^	from sklearn.feature_extraction.text import CountVectorizer$/;"	i
+CountVectorizer	ss_speech.py	/^	from sklearn.feature_extraction.text import CountVectorizer$/;"	i
+Data	ss_classify.py	/^	class Data: pass$/;"	c	function:addUnlabeled	inherits:
+Data	ss_news.py	/^	class Data: pass$/;"	c	function:read_files	inherits:
+Data	ss_news.py	/^	class Data: pass$/;"	c	function:read_unlabeled	inherits:
+Data	ss_speech.py	/^	class Data: pass$/;"	c	function:read_files	inherits:
+Data	ss_speech.py	/^	class Data: pass$/;"	c	function:read_unlabeled	inherits:
+DictVectorizer	ss_news.py	/^	from sklearn.feature_extraction import DictVectorizer$/;"	i
+DictVectorizer	ss_speech.py	/^	from sklearn.feature_extraction import DictVectorizer$/;"	i
+GridSearchCV	ss_classify.py	/^	from sklearn.model_selection import GridSearchCV$/;"	i
+LinearSVC	ss_classify.py	/^	from sklearn.svm import LinearSVC$/;"	i
+LogisticRegression	ss_classify.py	/^	from sklearn.linear_model import LogisticRegression$/;"	i
+MultinomialNB	ss_classify.py	/^	from sklearn.naive_bayes import MultinomialNB$/;"	i
+TfidfVectorizer	ss_classify.py	/^	from sklearn.feature_extraction.text import TfidfVectorizer$/;"	i
+TfidfVectorizer	ss_news.py	/^	from sklearn.feature_extraction.text import TfidfVectorizer$/;"	i
+TfidfVectorizer	ss_speech.py	/^	from sklearn.feature_extraction.text import TfidfVectorizer$/;"	i
+addUnlabeled	ss_classify.py	/^def addUnlabeled(unlabeled, X,y, cls_lr, cls_nb, cls_svm, speech):$/;"	f	access:public
+codecs	data/fenci.py	/^import codecs$/;"	i
+evaluate	ss_classify.py	/^def evaluate(X, yt, cls):$/;"	f	access:public
+file1	data/random_split.py	/^file1 = open(sys.argv[1] + "_" + str(ratio), "w+")$/;"	v
+file2	data/random_split.py	/^file2 = open(sys.argv[1] + "_" + str(1 - ratio), "w+")$/;"	v
+file_to_id	ss_news.py	/^def file_to_id(fname):$/;"	f	access:public
+file_to_id	ss_speech.py	/^def file_to_id(fname):$/;"	f	access:public
+getLabeledData	ss_classify.py	/^def getLabeledData():$/;"	f	access:public
+jieba	data/fenci.py	/^import jieba$/;"	i
+jiebacut	data/fenci.py	/^def jiebacut(name):$/;"	f	access:public
+line	data/random_split.py	/^  line = line.strip() + "\\n"$/;"	v
+matplotlib	ss_news.py	/^	import matplotlib.pyplot as plt$/;"	i
+matplotlib	ss_speech.py	/^	import matplotlib.pyplot as plt$/;"	i
+metrics	ss_classify.py	/^	from sklearn import metrics$/;"	i
+os	data/fenci.py	/^import os$/;"	i
+plot_graphs	ss_news.py	/^def plot_graphs(x, y, function):$/;"	f	access:public
+plot_graphs	ss_speech.py	/^def plot_graphs(x, y, function):$/;"	f	access:public
+plt	ss_news.py	/^	import matplotlib.pyplot as plt$/;"	i
+plt	ss_speech.py	/^	import matplotlib.pyplot as plt$/;"	i
+preprocessing	ss_classify.py	/^	from sklearn import preprocessing$/;"	i
+preprocessing	ss_news.py	/^	from sklearn import preprocessing$/;"	i
+preprocessing	ss_speech.py	/^	from sklearn import preprocessing$/;"	i
+random	data/random_split.py	/^import sys, random$/;"	i
+ratio	data/random_split.py	/^ratio = float(sys.argv[2])$/;"	v
+read_files	ss_news.py	/^def read_files(tarfname):$/;"	f	access:public
+read_files	ss_speech.py	/^def read_files(tarfname):$/;"	f	access:public
+read_instance	ss_classify.py	/^def read_instance(tar, ifname):$/;"	f	access:public
+read_instance	ss_news.py	/^def read_instance(tar, ifname):$/;"	f	access:public
+read_instance	ss_speech.py	/^def read_instance(tar, ifname):$/;"	f	access:public
+read_tsv	ss_classify.py	/^def read_tsv(tar, fname):$/;"	f	access:public
+read_tsv	ss_news.py	/^def read_tsv(tar, fname):$/;"	f	access:public
+read_tsv	ss_speech.py	/^def read_tsv(tar, fname):$/;"	f	access:public
+read_unlabeled	ss_news.py	/^def read_unlabeled(tarfname, news):$/;"	f	access:public
+read_unlabeled	ss_speech.py	/^def read_unlabeled(tarfname, speech):$/;"	f	access:public
+ss_classify	ss_news.py	/^	import ss_classify$/;"	i
+ss_classify	ss_speech.py	/^	import ss_classify$/;"	i
+sys	data/fenci.py	/^import sys$/;"	i
+sys	data/random_split.py	/^import sys, random$/;"	i
+tarfile	ss_classify.py	/^	import tarfile$/;"	i
+tarfile	ss_news.py	/^	import tarfile$/;"	i
+tarfile	ss_speech.py	/^	import tarfile$/;"	i
+train_classifier	ss_classify.py	/^def train_classifier(X, y):$/;"	f	access:public
+train_naive_bayes	ss_classify.py	/^def train_naive_bayes(X, y):$/;"	f	access:public
+train_svm	ss_classify.py	/^def train_svm(X, y):$/;"	f	access:public
+write_basic_kaggle_file	ss_news.py	/^def write_basic_kaggle_file(tsvfile, outfname):$/;"	f	access:public
+write_basic_kaggle_file	ss_speech.py	/^def write_basic_kaggle_file(tsvfile, outfname):$/;"	f	access:public
+write_gold_kaggle_file	ss_news.py	/^def write_gold_kaggle_file(tsvfile, outfname):$/;"	f	access:public
+write_gold_kaggle_file	ss_speech.py	/^def write_gold_kaggle_file(tsvfile, outfname):$/;"	f	access:public
+write_pred_kaggle_file	ss_classify.py	/^def write_pred_kaggle_file(unlabeled, cls, outfname, speech):$/;"	f	access:public

@@ -1,0 +1,52 @@
+说明，这份脚本通过重复十折交叉的方式，找出标注或有标签语料中的潜在问题数据
+
+python脚本说明：
+
+cnt_and_remove_record.py，
+    ## 参数1，读入记录中被更改过标签的数据
+    ## 参数2，删除原始数据中，标签被修改过的数据
+    ## 新文件用.s结尾
+
+count_different.py
+    ## 统计冲突语料不同标签的冲突次数
+
+rank_k_valid.py
+    ## 把数据划分到10折，折号写在行首
+    ## > 重定向输出
+
+create_croups.py
+    ## 根据rand_k_valid.py结果划分train.txt和test.txt
+    ## 参数1，测试集折号
+    ## 参数2，rand_k_valid.py的输出结果
+
+re_create_raw.py
+    # 根据预测结果重构测试集
+    ## 参数1，预测结果
+    ## 参数2，预测数据，包含原始标签
+    ## 参数3，flip标签后的数据，追加写
+    ## 参数4，当前轮次，用于记录冲突数据，数据写入record_flip_label_data.txt.v{t}
+
+
+run_times.sh 说明，用于找出人工标注数据中的错误，不会用Flip Label之后的数据训练
+准备输入文件 raw_data.txt.v0
+1、将数据划分到10折
+2、依次以10折9：1训练模型，
+    将1组成的测试集中分类有问题的数据找出存入record_flip_label_data.txt.v0，（实际预测权重低于0.1）
+    （这一步的数据实际没有用到）将1中问题数据改成预测标签后，存入raw_data.txt.v0.t${t}，t是迭代轮次
+3、重复1、2步骤10次
+4、计算冲突次数，结果存在record_flip_label_data.txt.v0.s；移出原始数据中的冲突数据，结果存在raw_data.txt.v0.s
+
+注意：每次十折都使用同一份数据，所以最终结果中，record_flip_label_data.txt.v0只会保存非原是标签的数据
+
+
+run.sh 说明，用于找出非人工标注数据中的潜在错误，并将错误给人标注，会使用Flip之后的数据训练
+准备输入文件 raw_data.txt.v0
+1、将上一轮Flip label之后的数据划分到10折
+2、依次以10折9：1训练模型，
+    将1组成的测试集中分类有问题的数据找出存入record_flip_label_data.txt.v${t}，（实际预测权重低于0.1）
+    将1中问题数据改成预测标签后，存入raw_data.txt.v0.t${t}，t是迭代轮次
+3、重复1、2步骤10次
+4、把所有的record_flip_label_data.txt.v* 合并到 record_flip_label_data.txt
+5、计算冲突次数，结果存在record_flip_label_data.txt.s；移出原始数据中的冲突数据，结果存在raw_data.txt.v0.s
+
+注意：每次迭代1、2的时候，会Flip Label，所以数据可能的标签会五花八门

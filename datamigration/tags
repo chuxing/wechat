@@ -1,0 +1,149 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FileProcess	FileProcess.py	/^class FileProcess(object):$/;"	c	inherits:object
+FileProcess	PatternMatch.py	/^from FileProcess import FileProcess $/;"	i
+GrammarAnalysis	process1.py	/^class GrammarAnalysis(object):$/;"	c	inherits:object
+PatternMatch	PatternMatch.py	/^class PatternMatch(object):$/;"	c	inherits:object
+PatternMatch	mainfun.py	/^from PatternMatch import PatternMatch$/;"	i
+PatternMatch	match_lexicon/PatternMatch.py	/^class PatternMatch(object):$/;"	c	inherits:object
+PatternMatch	match_lexicon/mainfun.py	/^from PatternMatch import PatternMatch$/;"	i
+PatternMatch	process1.py	/^class PatternMatch(object):$/;"	c	inherits:object
+Trie	PatternMatch.py	/^from Trie import Trie$/;"	i
+Trie	Trie.py	/^class Trie(object):$/;"	c	inherits:object
+Trie	match_lexicon/PatternMatch.py	/^from Trie import Trie$/;"	i
+Trie	match_lexicon/Trie.py	/^class Trie(object):$/;"	c	inherits:object
+Trie	process1.py	/^class Trie:$/;"	c	inherits:
+__init__	FileProcess.py	/^	def __init__(self):$/;"	m	class:FileProcess	access:public
+__init__	PatternMatch.py	/^    def __init__(self, querylist, rawtable, newtable):$/;"	m	class:PatternMatch	access:public
+__init__	Trie.py	/^    def __init__(self):$/;"	m	class:Trie	access:public
+__init__	match_lexicon/PatternMatch.py	/^    def __init__(self, querylist, rawtable, dict_pattern_name):$/;"	m	class:PatternMatch	access:public
+__init__	match_lexicon/Trie.py	/^    def __init__(self):$/;"	m	class:Trie	access:public
+__init__	process1.py	/^    def __init__(self):$/;"	m	class:Trie	access:public
+__init__	process1.py	/^    def __init__(self, querylist, rawtable, newtable):$/;"	m	class:GrammarAnalysis	access:public
+__init__	process1.py	/^    def __init__(self, querylist, rawtable, newtable):$/;"	m	class:PatternMatch	access:public
+__str__	Trie.py	/^    def __str__(self):$/;"	m	class:Trie	file:	access:private
+__str__	match_lexicon/Trie.py	/^    def __str__(self):$/;"	m	class:Trie	file:	access:private
+__str__	process1.py	/^    def __str__(self):$/;"	m	class:Trie	file:	access:private
+arg	match_lexicon/mainfun.py	/^        arg = os.path.join(root, f)$/;"	v
+arg2	match_lexicon/mainfun.py	/^        arg2 = os.path.join(pinyin_root,f.split(".")[0] + "_pinyin." + f.split(".")[1])$/;"	v
+codecs	FileProcess.py	/^import codecs$/;"	i
+codecs	PatternMatch.py	/^import codecs$/;"	i
+codecs	dataprocess.py	/^import codecs$/;"	i
+codecs	mainfun.py	/^import codecs$/;"	i
+codecs	match_lexicon/PatternMatch.py	/^import codecs$/;"	i
+codecs	match_lexicon/mainfun.py	/^import codecs$/;"	i
+codecs	news/newdomain/do.py	/^import codecs$/;"	i
+codecs	process1.py	/^import codecs$/;"	i
+codecs	temp/do.py	/^import codecs$/;"	i
+combine_file	match_lexicon/mainfun.py	/^def combine_file(f1name,f2name,fwname):$/;"	f	access:public
+dict_pattern_name	match_lexicon/mainfun.py	/^    dict_pattern_name = {}$/;"	v
+dict_pattern_name_pinyin	match_lexicon/mainfun.py	/^    dict_pattern_name_pinyin = {}$/;"	v
+do_fun	match_lexicon/mainfun.py	/^def do_fun(querylist,rawtablelist,dict_pattern_name,fwriter,wirtequerlist):$/;"	f	access:public
+domain_name	mainfun.py	/^    domain_name = sys.argv[1]$/;"	v
+f	dataprocess.py	/^	f = codecs.open(filename,'a','gb18030')$/;"	v
+filename	dataprocess.py	/^	filename = "E:\\\\code\\\\datamigration\\\\query\\\\query4.txt"$/;"	v
+find	Trie.py	/^    def find(self, string):$/;"	m	class:Trie	access:public
+find	match_lexicon/Trie.py	/^    def find(self, string):$/;"	m	class:Trie	access:public
+find	process1.py	/^    def find(self, string):$/;"	m	class:Trie	access:public
+findLastNode	Trie.py	/^    def findLastNode(self, string):$/;"	m	class:Trie	access:public
+findLastNode	match_lexicon/Trie.py	/^    def findLastNode(self, string):$/;"	m	class:Trie	access:public
+findLastNode	process1.py	/^    def findLastNode(self, string):$/;"	m	class:Trie	access:public
+fquery	match_lexicon/mainfun.py	/^    fquery = sys.argv[1]$/;"	v
+fquery_pinyin	match_lexicon/mainfun.py	/^    fquery_pinyin = fquery.split(".")[0] + "_pinyin." + fquery.split(".")[1]$/;"	v
+fr	news/newdomain/do.py	/^    fr = codecs.open(frname,'r','gb2312',errors='ignore')$/;"	v
+fr	temp/do.py	/^    fr = codecs.open(frname,'r','gb2312',errors='ignore')$/;"	v
+frname	news/newdomain/do.py	/^    frname = sys.argv[1]$/;"	v
+frname	temp/do.py	/^    frname = sys.argv[1]$/;"	v
+fw	news/newdomain/do.py	/^    fw = codecs.open(fwname,'w','gb2312',errors='ignore')$/;"	v
+fw	temp/do.py	/^    fw = codecs.open(fwname,'w','gb2312')$/;"	v
+fwname	news/newdomain/do.py	/^    fwname = sys.argv[2]$/;"	v
+fwname	temp/do.py	/^    fwname = sys.argv[2]$/;"	v
+fwriter	match_lexicon/mainfun.py	/^    fwriter = sys.argv[2]$/;"	v
+genNewdomain	PatternMatch.py	/^    def genNewdomain(self,domain,cnt):$/;"	m	class:PatternMatch	access:public
+genNewdomain	process1.py	/^    def genNewdomain(self,cnt):$/;"	m	class:PatternMatch	access:public
+genOutput	match_lexicon/PatternMatch.py	/^    def genOutput(self,outputfile,writequerlist):$/;"	m	class:PatternMatch	access:public
+generate_number_for_each_sentence	mainfun.py	/^    generate_number_for_each_sentence = int(sys.argv[2])$/;"	v
+getData	mainfun.py	/^def getData(rootdir):$/;"	f	access:public
+getData	match_lexicon/mainfun.py	/^def getData(rootdir):$/;"	f	access:public
+getData2	match_lexicon/mainfun.py	/^def getData2(filename):$/;"	f	access:public
+getData3	match_lexicon/mainfun.py	/^def getData3(rawfile,newfile,pinyindict):$/;"	f	access:public
+getNewtable	process1.py	/^def getNewtable(rootdir):$/;"	f	access:public
+getQuery	process1.py	/^def getQuery(rootdir):$/;"	f	access:public
+getRawtable	process1.py	/^def getRawtable(rootdir):$/;"	f	access:public
+insert	Trie.py	/^    def insert(self, string):$/;"	m	class:Trie	access:public
+insert	match_lexicon/Trie.py	/^    def insert(self, string):$/;"	m	class:Trie	access:public
+insert	process1.py	/^    def insert(self, string):$/;"	m	class:Trie	access:public
+linecache	FileProcess.py	/^import linecache$/;"	i
+linecache	mainfun.py	/^import linecache$/;"	i
+linecache	match_lexicon/mainfun.py	/^import linecache$/;"	i
+linecache	process1.py	/^import linecache  $/;"	i
+linesplit	news/newdomain/do.py	/^        linesplit = line.split(" ")$/;"	v
+linesplit	temp/do.py	/^        linesplit = line.split(" ")$/;"	v
+marisa_trie	process1.py	/^import marisa_trie$/;"	i
+matchQuery	PatternMatch.py	/^    def matchQuery(self):$/;"	m	class:PatternMatch	access:public
+matchQuery	match_lexicon/PatternMatch.py	/^    def matchQuery(self):$/;"	m	class:PatternMatch	access:public
+matchQuery	process1.py	/^    def matchQuery(self):$/;"	m	class:PatternMatch	access:public
+newfw	match_lexicon/mainfun.py	/^        newfw = fwriter $/;"	v
+newfw1	match_lexicon/mainfun.py	/^        newfw1 = fwriter + "_" + "zhongwen" $/;"	v
+newfw2	match_lexicon/mainfun.py	/^        newfw2 = fwriter + "_" + "pinyin" $/;"	v
+newtable	mainfun.py	/^    newtable = getData(prestring + "\/newtable\/")$/;"	v
+newtable	process1.py	/^    newtable = getNewtable(prestring + "\\\\newtable\\\\")$/;"	v
+optargc	match_lexicon/mainfun.py	/^    optargc = sys.argv[4]$/;"	v
+os	FileProcess.py	/^import os$/;"	i
+os	dataprocess.py	/^import os$/;"	i
+os	mainfun.py	/^import os$/;"	i
+os	match_lexicon/mainfun.py	/^import os$/;"	i
+os	process1.py	/^import os$/;"	i
+os	temp/do.py	/^import os$/;"	i
+pattern	dataprocess.py	/^	pattern = [line.strip() for line in codecs.open("pattern.txt", "r", "gb18030")]$/;"	v
+pattern_cnt	match_lexicon/mainfun.py	/^    pattern_cnt = -1$/;"	v
+pinyin	match_lexicon/mainfun.py	/^        pinyin = line.strip().split(" ")[1]$/;"	v
+pinyin_root	match_lexicon/mainfun.py	/^    pinyin_root = sys.argv[3] + "_pinyin"$/;"	v
+pinyindict	match_lexicon/mainfun.py	/^    pinyindict = {}$/;"	v
+pm	mainfun.py	/^    pm = PatternMatch(querylist, rawtable, newtable)$/;"	v
+prestring	mainfun.py	/^    prestring = ".\/" + domain_name$/;"	v
+prestring	process1.py	/^    prestring = "E:\\code\\datamigration"$/;"	v
+printTree	Trie.py	/^    def printTree(self, node, layer):$/;"	m	class:Trie	access:public
+printTree	match_lexicon/Trie.py	/^    def printTree(self, node, layer):$/;"	m	class:Trie	access:public
+printTree	process1.py	/^    def printTree(self, node, layer):$/;"	m	class:Trie	access:public
+querylist	mainfun.py	/^    querylist = getData(prestring + "\/query\/")$/;"	v
+querylist	match_lexicon/mainfun.py	/^    querylist = []$/;"	v
+querylist	process1.py	/^    querylist = getQuery(prestring + "\\\\query\\\\")$/;"	v
+querylist_item	match_lexicon/mainfun.py	/^    querylist_item = getData2(fquery)$/;"	v
+querylist_item_pinyin	match_lexicon/mainfun.py	/^    querylist_item_pinyin = getData3(fquery,fquery_pinyin,pinyindict)$/;"	v
+querylist_pinyin	match_lexicon/mainfun.py	/^    querylist_pinyin = []$/;"	v
+random	FileProcess.py	/^import random$/;"	i
+random	mainfun.py	/^import random$/;"	i
+random	match_lexicon/mainfun.py	/^import random$/;"	i
+random	process1.py	/^import random$/;"	i
+rawtable	mainfun.py	/^    rawtable = getData(prestring + "\/rawtable\/")$/;"	v
+rawtable	match_lexicon/mainfun.py	/^        rawtable = getData2(arg)$/;"	v
+rawtable	process1.py	/^    rawtable = getRawtable(prestring + "\\\\rawtable\\\\")$/;"	v
+rawtableProcess	PatternMatch.py	/^    def rawtableProcess(self):$/;"	m	class:PatternMatch	access:public
+rawtableProcess	match_lexicon/PatternMatch.py	/^    def rawtableProcess(self):$/;"	m	class:PatternMatch	access:public
+rawtableProcess	process1.py	/^    def rawtableProcess(self):$/;"	m	class:PatternMatch	access:public
+rawtable_pinyin	match_lexicon/mainfun.py	/^        rawtable_pinyin = getData3(arg,arg2,pinyindict)$/;"	v
+rawtablelist	match_lexicon/mainfun.py	/^    rawtablelist = []$/;"	v
+rawtablelist_pinyin	match_lexicon/mainfun.py	/^    rawtablelist_pinyin = []$/;"	v
+re	dataprocess.py	/^import re$/;"	i
+readfromfile	FileProcess.py	/^	def readfromfile(self,domain,fileid,linecnt):$/;"	m	class:FileProcess	access:public
+readfromfile	dataprocess.py	/^def readfromfile():$/;"	f	access:public
+readfromfile	process1.py	/^def readfromfile(fileid,linecnt):$/;"	f	access:public
+sentence	dataprocess.py	/^			sentence = sentence.replace(i,'')$/;"	v
+sentence	dataprocess.py	/^		sentence = line$/;"	v
+sentence	news/newdomain/do.py	/^        sentence = str(linesplit[0])$/;"	v
+sentence	temp/do.py	/^        sentence = linesplit[0] + " "$/;"	v
+sys	dataprocess.py	/^import sys$/;"	i
+sys	mainfun.py	/^import sys$/;"	i
+sys	match_lexicon/mainfun.py	/^import sys$/;"	i
+sys	news/newdomain/do.py	/^import sys$/;"	i
+sys	temp/do.py	/^import sys$/;"	i
+word	match_lexicon/mainfun.py	/^        word = line.strip().split(" ")[0]$/;"	v
+word2pinyin	match_lexicon/mainfun.py	/^def word2pinyin(line):$/;"	f	access:public
+write2file	FileProcess.py	/^	def write2file(self,domian,flag,fileid,method,string):$/;"	m	class:FileProcess	access:public
+write2file	dataprocess.py	/^def write2file(fileid,string):$/;"	f	access:public
+write2file	process1.py	/^def write2file(flag,fileid,method,string):$/;"	f	access:public

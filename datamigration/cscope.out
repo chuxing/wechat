@@ -1,0 +1,5926 @@
+cscope 15 $HOME/code/datamigration -q 0000000234 0000026025
+	@FileProcess.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+2 
+impÜt
+ 
+os
+
+
+3 
+impÜt
+ 
+lšeÿche
+
+
+4 
+impÜt
+ 
+¿ndom
+
+
+5 
+impÜt
+ 
+codecs
+
+
+6 
+şass
+ 
+	$FeProûss
+(
+objeù
+):
+
+8 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+9 
+	`su³r
+(
+FeProûss
+, 
+£lf
+).
+	$__š™__
+()
+
+11 
+def
+ 
+	$wr™e2fe
+(
+£lf
+,
+domŸn
+,
+æag
+,
+feid
+,
+m‘hod
+,
+¡ršg
+):
+
+12 
+f’ame
+ = "./" + 
+domŸn
+ + "/Ãwdomaš/Ãwdomaš_" + 
+m‘hod
+ + 
+feid
+ + ".txt"
+
+13 
+æag
+ =ğ1 
+ªd
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+f’ame
+):
+os
+.
+	$»move
+(
+f’ame
+)
+
+14 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'a','gb2312')
+
+15 
+f
+.
+	`wr™e
+(
+¡ršg
+.
+	`decode
+('utf8') + "\n")
+
+16 
+def
+ 
+	$»adäomfe
+(
+£lf
+,
+domaš
+,
+feid
+,
+lšeút
+):
+
+17 
+f’ame
+ = "./" + 
+domaš
+ + "/ÃwbË/ÃwbË_" + 
+feid
+ + ".txt"
+
+18 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'r','gb2312')
+
+19 
+tmp¡r
+ = ""
+
+20 #´šˆ
+lšeút
+,
+¿ndomlše
+
+
+21 #´šˆ
+f’ame
+
+
+22 
+Œy
+:
+
+23 
+¿ndomlše
+ = 
+¿ndom
+.
+	`¿nd¿nge
+(1,
+lšeút
+ + 1)
+
+24 
+tmp¡r
+ = (
+lšeÿche
+.
+	`g‘lše
+(
+f’ame
+,
+¿ndomlše
+).
+	`decode
+('gb2312').
+	`’code
+('utf8')).
+	`r¡r
+("\n")
+
+26 
+exû±
+ 
+Exû±iÚ
+ 
+as
+ 
+e
+:
+
+27 
+·ss
+
+
+29 #´šˆ
+tmp¡r
++"sdf"
+
+30  
+tmp¡r
+
+
+	@PatternMatch.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+3 
+äom
+ 
+Tr›
+ 
+impÜt
+ Trie
+
+4 
+impÜt
+ 
+codecs
+
+
+5 
+äom
+ 
+FeProûss
+ 
+impÜt
+ FileProcess
+
+6 
+şass
+ 
+	$P©‹ºM©ch
+(
+objeù
+):
+
+8 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+qu”yli¡
+, 
+¿wbË
+, 
+ÃwbË
+):
+
+9 
+	`su³r
+(
+P©‹ºM©ch
+, 
+£lf
+).
+	$__š™__
+()
+
+10 
+£lf
+.
+qu”li¡
+ = 
+qu”yli¡
+
+
+11 
+£lf
+.
+¿wbË
+ =„awtable
+
+12 
+£lf
+.
+ÃwbË
+ =‚ewtable
+
+14 
+def
+ 
+	$¿wbËProûss
+(
+£lf
+):
+
+15 
+£lf
+.
+¿wŒ›
+ = []
+
+16 
+bË
+ 
+š
+ 
+£lf
+.
+¿wbË
+:
+
+17 
+Œ“
+ = 
+	$Tr›
+()
+
+18 
+wÜds
+ 
+š
+ 
+bË
+:
+
+19 
+	`Ën
+(
+wÜds
+.
+	`¡r
+("\r\n")è=ğ0 
+Ü
+ words == '\0':
+
+20 
+Œ“
+.
+	`š£¹
+(
+wÜds
+.
+	`¡r
+(""))
+
+21 
+£lf
+.
+¿wŒ›
+.
+	$­³nd
+(
+Œ“
+)
+
+22 
+d–
+ 
+Œ“
+
+
+24 
+def
+ 
+	$m©chQu”y
+(
+£lf
+):
+
+25 
+£lf
+.
+Ãwdomaš
+ = []
+
+26 
+qu”yid
+ = 0
+
+27 
+qu”y
+ 
+š
+ 
+£lf
+.
+qu”li¡
+:
+
+28 
+´št
+ "qu”yid" + 
+	$¡r
+(
+qu”yid
+)
+
+29 
+qu”yid
+ += 1
+
+30 
+qu”yút
+ = 0
+
+31 #´šˆ
+	`»´
+(
+qu”y
+).
+	`decode
+('unicode-escape'),
+
+32 
+®Êew£Á’û
+ = []
+
+33 
+£Á’û
+ 
+š
+ 
+qu”y
+:
+
+34 
+qu”yút
+ % 10000 == 0:
+
+35 
+´št
+ 
+qu”yút
+,
+£Á’û
+
+
+36 
+qu”yút
+ += 1
+
+37 
+sšdex
+ = 0
+
+38 
+Ãw£Á’û
+ = []
+
+39 
+£Á’û
+ = s’‹nû.
+	`¡r
+("")
+
+40 
+£Á’ûæag
+ = 0
+
+41 
+sšdex
+ < 
+	$Ën
+(
+£Á’û
+):
+
+42 
+sub£Á’û
+ = 
+£Á’û
+[
+sšdex
+:]
+
+43 
+id
+ = -1
+
+44 
+maxËngth
+ = 0
+
+45 
+Œ“id
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+¿wŒ›
+)):
+
+46 
+æag
+,
+šdex
+ = 
+£lf
+.
+¿wŒ›
+[
+Œ“id
+].
+	$fšd
+(
+sub£Á’û
+)
+
+47 
+æag
+ =ğ
+True
+ 
+ªd
+ 
+šdex
+ > 
+maxËngth
+:
+
+48 
+maxËngth
+ = 
+šdex
+
+
+49 
+id
+ = 
+Œ“id
+
+
+50 
+id
+ == -1:
+
+51 
+Ãw£Á’û
+.
+	$­³nd
+(
+sub£Á’û
+[0])
+
+52 
+sšdex
+ += 1
+
+54 
+£Á’ûæag
+ = 1
+
+55 
+Ãw£Á’û
+.
+	`­³nd
+("[["+
+	`¡r
+(
+id
+)+"]]")
+
+56 
+sšdex
+ +ğ
+	$max
+(1,
+maxËngth
+)
+
+57 
+£Á’ûæag
+:
+
+58 
+®Êew£Á’û
+.
+	$­³nd
+(
+Ãw£Á’û
+)
+
+60 
+®Êew£Á’û
+.
+	`­³nd
+("!@#$%^&*()_+")
+
+61 #´šˆ
+	`»´
+(
+®Êew£Á’û
+).
+	`decode
+('unicode-escape')
+
+62 
+£lf
+.
+Ãwdomaš
+.
+	$­³nd
+(
+®Êew£Á’û
+)
+
+64 
+def
+ 
+	$g’Newdomaš
+(
+£lf
+,
+domaš
+,
+út
+):
+
+65 
+å
+ = 
+	$FeProûss
+()
+
+66 
+domašid
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+Ãwdomaš
+)):
+
+67 
+´št
+ "domašid: " + 
+	$¡r
+(
+domašid
+)
+
+68 
+d–‘eæag
+ = 0
+
+69 
+£Á’û
+ 
+š
+ 
+£lf
+.
+Ãwdomaš
+[
+domašid
+]:
+
+70 
+d–‘eæag
+ += 1
+
+71 
+£Á’û
+ == "!@#$%^&*()_+":
+
+72 
+å
+.
+	`wr™e2fe
+(
+domaš
+,
+d–‘eæag
+, 
+	`¡r
+(
+domašid
++1), "Œ›", 
+£Á’û
+)
+
+74 
+nowút
+ = 0
+
+75 #´šˆ
+	`»´
+(
+£Á’û
+).
+	`decode
+('unicode-escape')
+
+76 
+nowút
+ < 
+út
+:
+
+77 
+nowút
+ += 1
+
+78 
+Ãw£Á’û
+ =""
+
+79 
+·‰”n
+ = ""
+
+80 
+wÜd
+ 
+š
+ 
+£Á’û
+:
+
+81 
+·‰”n
+ +ğ
+wÜd
+.
+	`’code
+('utf8')
+
+82 
+wÜd
+.
+	`¡¬tsw™h
+("[["):
+
+83 
+’did
+ğ
+wÜd
+.
+	`šdex
+(']]')
+
+84 
+feid
+ = 
+wÜd
+[2:
+’did
+]
+
+85 
+ÃwbËwÜd
+ = 
+å
+.
+	`»adäomfe
+(
+domaš
+,
+	`¡r
+((
+feid
+)),
+	`Ën
+(
+£lf
+.
+ÃwbË
+[(fileid)]))
+
+87 
+ÃwbËwÜd
+ = 
+wÜd
+.
+	`’code
+('utf8')
+
+88 
+Ãw£Á’û
+ +ğ
+ÃwbËwÜd
+
+
+89 
+å
+.
+	`wr™e2fe
+(
+domaš
+,
+d–‘eæag
+, 
+	`¡r
+(
+domašid
++1), "Œ›", 
+Ãw£Á’û
+)
+
+90 
+d–‘eæag
+ += 1
+
+91 #´šˆ
+	`»´
+(
+£Á’û
+).
+	`decode
+('unicode-escape')
+
+	@Trie.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+3 
+şass
+ 
+	$Tr›
+(
+objeù
+):
+
+4 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+5 
+£lf
+.
+roÙ
+ = 
+	$diù
+()
+
+6 
+£lf
+.
+END
+ = '\0'
+
+8 
+def
+ 
+	$š£¹
+(
+£lf
+, 
+¡ršg
+):
+
+9 
+¡ršg
+ == '\0':
+
+10 
+šdex
+, 
+node
+,
+»tuº_šdex
+, 
+»tuº_æag
+ = 
+£lf
+.
+	$fšdLa¡Node
+(
+¡ršg
+)
+
+11 #´šˆ
+šdex
+,
+node
+
+
+12 
+š
+ 
+¡ršg
+[
+šdex
+:]:
+
+13 
+node
+òode.
+	`£tdeçuÉ
+(,{
+	}
+})
+
+14 
+	gnode
+[
+£lf
+.
+END
+] = 
+NÚe
+
+
+16 
+def
+ 
+	$fšd
+(
+£lf
+, 
+¡ršg
+):
+
+17 
+šdex
+, 
+node
+,
+»tuº_šdex
+,
+»tuº_æag
+ = 
+£lf
+.
+	$fšdLa¡Node
+(
+¡ršg
+)
+
+18 #´šˆ
+šdex
+,
+£lf
+.
+END
+,£lf.END 
+š
+ 
+node
+
+
+19 #ià
+£lf
+.
+END
+ 
+š
+ 
+node
+:
+
+20 #´šˆ
+šdex
+,
+	`»´
+(
+node
+).
+	`decode
+('unicode-escape')
+
+21 #šdex =ğ
+	`Ën
+(
+¡ršg
+è
+ªd
+
+
+22  
+»tuº_æag
+,
+»tuº_šdex
+
+
+24 
+def
+ 
+	$fšdLa¡Node
+(
+£lf
+, 
+¡ršg
+):
+
+25 #´šˆ
+¡ršg
+
+
+26 
+node
+ = 
+£lf
+.
+roÙ
+
+
+27 
+šdex
+ = 0
+
+28 
+»tuº_æag
+ = 
+F®£
+
+
+29 
+»tuº_šdex
+ = -1
+
+30 
+šdex
+ < 
+	$Ën
+(
+¡ršg
+):
+
+31 ğ
+¡ršg
+[
+šdex
+]
+
+33 
+šdex
+ += 1
+
+34 
+»tuº_šdex
+ = 
+šdex
+
+
+36 !ğ'' 
+	$ªd
+ (
+š
+ 
+node
+):
+
+37 
+node
+ =‚ode[]
+
+38 
+£lf
+.
+END
+ 
+š
+ 
+node
+ :
+
+39 
+»tuº_æag
+ = 
+True
+
+
+40 
+»tuº_šdex
+ = 
+šdex
+ + 1
+
+43 
+šdex
+ += 1
+
+44  (
+šdex
+, 
+node
+,
+»tuº_šdex
+,
+»tuº_æag
+)
+
+45 
+def
+ 
+	$´štT»e
+(
+£lf
+, 
+node
+, 
+Ïy”
+):
+
+46 
+node
+ =ğ
+NÚe
+:
+
+48 
+»s
+ = []
+
+49 
+™ems
+ = 
+	`sÜ‹d
+(
+node
+.
+	`™ems
+(), 
+key
+=
+Ïmbda
+ 
+x
+:x[0])
+
+50 
+»s
+.
+	$­³nd
+(
+™ems
+[0][0])
+
+51 
+»s
+.
+	`­³nd
+(
+£lf
+.
+	`´štT»e
+(
+™ems
+[0][1], 
+Ïy”
++1))
+
+52 
+™em
+ 
+š
+ 
+™ems
+[1:]:
+
+53 
+»s
+.
+	`­³nd
+('.' * 
+Ïy”
+)
+
+54 
+»s
+.
+	$­³nd
+(
+™em
+[0])
+
+55 
+»s
+.
+	`­³nd
+(
+£lf
+.
+	`´štT»e
+(
+™em
+[1], 
+Ïy”
++1))
+
+56  ''.
+	$još
+(
+»s
+)
+
+57 
+def
+ 
+	$__¡r__
+(
+£lf
+):
+
+59 #´šˆ
+£lf
+.
+	`´štT»e
+(£lf.
+roÙ
+, 0).
+	`’code
+('gb2312')
+
+60  
+	`unicode
+(
+£lf
+.
+	`´štT»e
+(£lf.
+roÙ
+, 0)).
+	`’code
+('utf-8')
+
+	@dataprocess.py
+
+1 #-*- 
+codšg
+:
+gb2312
+ -*-
+
+2 
+impÜt
+ 
+codecs
+
+
+3 
+impÜt
+ 
+os
+
+
+4 
+impÜt
+ 
+sys
+
+
+5 
+impÜt
+ 
+»
+
+
+6 
+def
+ 
+	$wr™e2fe
+(
+feid
+,
+¡ršg
+):
+
+7 #´šˆ
+feid
+,
+	`ty³
+(
+¡ršg
+)
+
+8 
+f’ame
+ = "E:\\code\\d©amig¿tiÚ\\¿wbË\\¿wbË" + 
+feid
+ + ".txt"
+
+9 #ià
+os
+.
+·th
+.
+	`exi¡s
+(
+f’ame
+):os.
+	`»move
+(filename)
+
+10 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'a','utf8')
+
+11 #´šˆ
+¡ršg
+,
+	`ty³
+(string)
+
+12 
+f
+.
+	`wr™e
+(
+¡ršg
+ + "\r\n")
+
+13 
+def
+ 
+	$»adäomfe
+():
+
+14 
+f’ame
+ = "E:\\code\\data\\music.txt"
+
+15 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'r','gb18030')
+
+16 
+·‰”n1
+ = 
+»
+.
+	`compe
+(
+r
+'\{.*\}')
+
+17 
+·‰”n2
+ = 
+»
+.
+	`compe
+(
+r
+'\[.*\]')
+
+18 
+·‰”n3
+ = 
+»
+.
+	`compe
+(
+r
+'\(.*\)')
+
+19 
+·‰”n4
+ = 
+»
+.
+	`compe
+(
+r
+'\^.*\_')
+
+20 
+·‰”n5
+ = 
+»
+.
+	`compe
+(
+r
+'\@.*\#')
+
+21 
+·‰”n6
+ = 
+»
+.
+	`compe
+(
+r
+'\$.*\%')
+
+22 
+·‰”n7
+ = 
+»
+.
+	`compe
+(
+r
+'\&.*\*')
+
+23 
+bË
+ = [
+	$£t
+(è
+_
+ 
+š
+ 
+	`¿nge
+(7)]
+
+24 
+lše
+ 
+š
+ 
+f
+.
+	$»adlšes
+():
+
+25 
+£Á’û
+ = 
+lše
+[:-2]
+
+26 #´šˆ
+£Á’û
+
+
+27 
+m©ch1
+ = 
+·‰”n1
+.
+	$£¬ch
+(
+£Á’û
+)
+
+28 
+m©ch2
+ = 
+·‰”n2
+.
+	$£¬ch
+(
+£Á’û
+)
+
+29 
+m©ch3
+ = 
+·‰”n3
+.
+	$£¬ch
+(
+£Á’û
+)
+
+30 
+m©ch4
+ = 
+·‰”n4
+.
+	$£¬ch
+(
+£Á’û
+)
+
+31 
+m©ch5
+ = 
+·‰”n5
+.
+	$£¬ch
+(
+£Á’û
+)
+
+32 
+m©ch6
+ = 
+·‰”n6
+.
+	$£¬ch
+(
+£Á’û
+)
+
+33 
+m©ch7
+ = 
+·‰”n7
+.
+	$£¬ch
+(
+£Á’û
+)
+
+34 
+m©ch1
+:
+
+35 #´šˆ
+m©ch1
+.
+	`group
+()
+
+36 
+bË
+[0].
+	`add
+(
+m©ch1
+.
+	`group
+()[1:-1])
+
+37 
+m©ch2
+:
+
+38 #´šˆ
+m©ch2
+.
+	`group
+()
+
+39 
+bË
+[1].
+	`add
+(
+m©ch2
+.
+	`group
+()[1:-1])
+
+40 
+m©ch3
+:
+
+41 #´šˆ
+m©ch3
+.
+	`group
+()
+
+42 
+bË
+[2].
+	`add
+(
+m©ch3
+.
+	`group
+()[1:-1])
+
+43 
+m©ch4
+:
+
+44 #´šˆ
+m©ch4
+.
+	`group
+()
+
+45 
+bË
+[3].
+	`add
+(
+m©ch4
+.
+	`group
+()[1:-1])
+
+46 
+m©ch5
+:
+
+47 #´šˆ
+m©ch5
+.
+	`group
+()
+
+48 
+bË
+[4].
+	`add
+(
+m©ch5
+.
+	`group
+()[1:-1])
+
+49 
+m©ch6
+:
+
+50 #´šˆ
+m©ch6
+.
+	`group
+()
+
+51 
+bË
+[5].
+	`add
+(
+m©ch6
+.
+	`group
+()[1:-1])
+
+52 
+m©ch7
+:
+
+53 #´šˆ
+m©ch7
+.
+	`group
+()
+
+54 
+bË
+[6].
+	`add
+(
+m©ch7
+.
+	`group
+()[1:-1])
+
+55  
+bË
+
+
+57 
+__Çme__
+ == '__main__':
+
+59 
+·‰”n
+ = [
+lše
+.
+	$¡r
+(è
+lše
+ 
+š
+ 
+codecs
+.
+	`İ’
+("pattern.txt", "r", "gb18030")]
+
+60 
+f’ame
+ = "E:\\code\\datamigration\\query\\query4.txt"
+
+61 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'a','gb18030')
+
+62 
+lše
+ 
+š
+ 
+codecs
+.
+	`İ’
+("E:\\code\\d©a\\music.txt",'r','gbk').
+	$»adlšes
+():
+
+63 #´šˆ
+	`ty³
+(
+lše
+)
+
+64 
+£Á’û
+ = 
+lše
+
+
+65 
+i
+ 
+š
+ 
+·‰”n
+:
+
+66 
+£Á’û
+ = s’‹nû.
+	`»¶aû
+(
+i
+,'')
+
+67 #´šˆ
+£Á’û
+,
+	`ty³
+(sentence)
+
+68 
+Œy
+:
+
+69 
+f
+.
+	`wr™e
+(
+£Á’û
+.
+	`’code
+('gb18030'))
+
+70 
+exû±
+ 
+Exû±iÚ
+ 
+as
+ 
+e
+:
+
+71 
+´št
+ 
+£Á’û
+
+
+72 #´šˆ
+£Á’û
+
+
+73 #¿wbË = 
+	`»adäomfe
+()
+
+74 #fÜ 
+bËi
+ 
+š
+ 
+	`¿nge
+(
+	`Ën
+(
+¿wbË
+)):
+
+75 ## 
+´št
+ 
+¿wbË
+[
+bËi
+]
+
+76 #fÜ 
+wÜds
+ 
+š
+ 
+¿wbË
+[
+bËi
+]:
+
+77 ## 
+´št
+ 
+wÜds
+
+
+78 #æag = 
+True
+
+
+79 #ià
+wÜds
+ == '':
+
+80 #fÜ 
+i
+ 
+š
+ 
+·‰”n
+:
+
+81 #ià
+i
+ 
+š
+ 
+wÜds
+:
+
+82 #æag = 
+F®£
+
+
+84 #ià
+æag
+ =ğ
+True
+:
+
+86 #´šˆ
+wÜds
++"asdf",
+	`ty³
+(words)
+
+87 #wr™e2fe(
+	`¡r
+(
+bËi
++1), 
+wÜds
+)
+
+	@mainfun.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+2 
+impÜt
+ 
+os
+
+
+3 
+impÜt
+ 
+codecs
+
+
+4 
+impÜt
+ 
+¿ndom
+
+
+5 
+impÜt
+ 
+lšeÿche
+
+
+6 
+impÜt
+ 
+sys
+
+
+7 
+äom
+ 
+P©‹ºM©ch
+ 
+impÜt
+ PatternMatch
+
+10 
+def
+ 
+	$g‘D©a
+(
+roÙdœ
+):
+
+11 
+d©®i¡
+ = []
+
+12 
+fes
+ = 
+os
+.
+	$li¡dœ
+(
+roÙdœ
+)
+
+13 
+ids
+ = 
+	`¡r
+(
+fes
+[0]).
+	`šdex
+('_')
+
+14 
+fes
+.
+	`sÜt
+(
+key
+ğ
+Ïmbda
+ 
+x
+:(x[
+ids
++1:-4]))
+
+15 
+fe
+ 
+š
+ 
+fes
+:
+
+16 
+d©a
+ = []
+
+17 
+·th
+ = 
+os
+.·th.
+	$još
+(
+roÙdœ
+, 
+fe
+)
+
+18 
+f
+ = 
+codecs
+.
+	`İ’
+(
+·th
+, "r", 'gb2312', 
+”rÜs
+='ignore')
+
+19 
+lše
+ 
+š
+ 
+f
+.
+	`»adlšes
+()[:]:
+
+20 
+d©a
+.
+	`­³nd
+(
+lše
+.
+	`¡r
+("\r\n"))
+
+21 
+d©®i¡
+.
+	$­³nd
+(
+d©a
+)
+
+22  
+d©®i¡
+
+
+25 
+__Çme__
+ == '__main__':
+
+26 
+domaš_Çme
+ = 
+sys
+.
+¬gv
+[1]
+
+27 
+g’”©e_numb”_fÜ_—ch_£Á’û
+ = (
+sys
+.
+¬gv
+[2])
+
+28 
+´e¡ršg
+ = "./" + 
+domaš_Çme
+
+
+29 
+qu”yli¡
+ = 
+	`g‘D©a
+(
+´e¡ršg
+ + "/query/")
+
+30 
+¿wbË
+ = 
+	`g‘D©a
+(
+´e¡ršg
+ + "/rawtable/")
+
+31 
+ÃwbË
+ = 
+	`g‘D©a
+(
+´e¡ršg
+ + "/newtable/")
+
+32 
+´št
+ "read done"
+
+33 
+pm
+ = 
+	$P©‹ºM©ch
+(
+qu”yli¡
+, 
+¿wbË
+, 
+ÃwbË
+)
+
+34 
+´št
+ "init done"
+
+35 
+pm
+.
+	$¿wbËProûss
+()
+
+36 
+´št
+ "trie done"
+
+37 
+pm
+.
+	$m©chQu”y
+()
+
+38 
+´št
+ "mathch done"
+
+39 
+pm
+.
+	$g’Newdomaš
+(
+domaš_Çme
+, 
+g’”©e_numb”_fÜ_—ch_£Á’û
+)
+
+40 
+´št
+ "generate done"
+
+	@match_lexicon/PatternMatch.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+3 
+äom
+ 
+Tr›
+ 
+impÜt
+ Trie
+
+4 
+impÜt
+ 
+codecs
+
+
+5 
+şass
+ 
+	$P©‹ºM©ch
+(
+objeù
+):
+
+7 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+qu”yli¡
+, 
+¿wbË
+, 
+diù_·‰”n_Çme
+):
+
+8 
+	`su³r
+(
+P©‹ºM©ch
+, 
+£lf
+).
+	$__š™__
+()
+
+9 
+£lf
+.
+qu”li¡
+ = 
+qu”yli¡
+
+
+10 
+£lf
+.
+¿wbË
+ =„awtable
+
+11 
+£lf
+.
+diù_·‰”n_Çme
+ = dict_pattern_name
+
+13 
+def
+ 
+	$¿wbËProûss
+(
+£lf
+):
+
+14 
+£lf
+.
+¿wŒ›
+ = []
+
+15 
+bË
+ 
+š
+ 
+£lf
+.
+¿wbË
+:
+
+16 #ià
+	`Ën
+(
+bË
+è=ğ0 
+Ü
+able == '\n':
+
+17 
+Œ“
+ = 
+	$Tr›
+()
+
+18 
+wÜds
+ 
+š
+ 
+bË
+:
+
+19 #ià
+bËid
+ =ğ0 :
+´št
+ 
+wÜds
+
+
+20 
+	`Ën
+(
+wÜds
+.
+	`¡r
+("\r\n")è=ğ0 
+Ü
+ words == '\0':
+
+21 
+Œ“
+.
+	`š£¹
+(
+wÜds
+.
+	$¡r
+())
+
+22 
+£lf
+.
+¿wŒ›
+.
+	$­³nd
+(
+Œ“
+)
+
+23 
+d–
+ 
+Œ“
+
+
+25 
+def
+ 
+	$m©chQu”y
+(
+£lf
+):
+
+26 
+£lf
+.
+ouut
+ = []
+
+27 
+qu”y
+ 
+š
+ 
+£lf
+.
+qu”li¡
+:
+
+28 
+qu”yút
+ = 0
+
+29 #´šˆ
+	`»´
+(
+qu”y
+).
+	`decode
+('unicode-escape'),
+
+30 
+®Êew£Á’û
+ = []
+
+31 
+£Á’û
+ 
+š
+ 
+qu”y
+:
+
+32 
+£Á’û
+ = s’‹nû.
+	`¡r
+(" ").strip("\r\n")
+
+33 
+diù_šdex_id
+ = {
+	}
+}
+
+34 
+diù_šdex_id
+[0] = 0
+
+35 
+diù_id_šdex
+ = {}
+
+36 
+diù_id_šdex
+[0] = 0
+
+37 
+cmpid
+ = 1
+
+38 #´šˆ
+£Á’û
+.
+’code
+('utf8')
+
+39 
+tmpšdex
+ 
+š
+ 
+¿nge
+(0,
+	$Ën
+(
+£Á’û
+)):
+
+40 
+£Á’û
+[
+tmpšdex
+] == ' ':
+
+41 
+diù_šdex_id
+[
+tmpšdex
+ + 1] = 
+cmpid
+
+
+42 
+diù_id_šdex
+[
+cmpid
+] = 
+tmpšdex
+ + 1
+
+43 
+cmpid
+ += 1
+
+44 
+diù_šdex_id
+[
+	`Ën
+(
+£Á’û
+)] = 
+cmpid
+
+
+45 
+diù_id_šdex
+[
+cmpid
+] = 
+	$Ën
+(
+£Á’û
+)
+
+46 #´šˆ
+diù_šdex_id
+,
+diù_id_šdex
+
+
+47 
+£lf
+.
+Ãw£Á’û
+ = 
+£Á’û
+
+
+48 
+qu”yút
+ % 10000 == 0:
+
+49 
+´št
+ "qu”y:" + 
+	$¡r
+(
+qu”yút
+)
+
+50 
+qu”yút
+ += 1
+
+51 
+Œ“id
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+¿wŒ›
+)):
+
+52 
+sšdex
+ = 0
+
+53 
+sid
+ = 0
+
+54 
+£Á’ûæag
+ = 0
+
+55 
+tšdex
+ = -1
+
+56 
+maxËngth
+ = 0
+
+57 
+sšdex
+ < 
+	$Ën
+(
+£Á’û
+):
+
+58 
+£Á’û
+[
+sšdex
+] == ' ':
+
+59 
+sšdex
+ += 1
+
+61 
+sub£Á’û
+ = 
+£Á’û
+[
+sšdex
+:]
+
+62 
+æag
+,
+šdex
+ = 
+£lf
+.
+¿wŒ›
+[
+Œ“id
+].
+	$fšd
+(
+sub£Á’û
+)
+
+63 #´šˆ
+æag
+,
+šdex
+
+
+64 
+æag
+ =ğ
+True
+ 
+ªd
+ 
+šdex
+ > 
+maxËngth
+ 
+	`ªd
+ (
+sšdex
+ + index =ğ
+	$Ën
+(
+£Á’û
+è
+Ü
+ s’‹nû[
+sšdex
+ + 
+šdex
+ - 1] == ' '):
+
+65 
+maxËngth
+ = 
+šdex
+
+
+66 
+tšdex
+ = 
+sšdex
+
+
+67 
+sšdex
+ = 
+diù_id_šdex
+[
+sid
+ + 1]
+
+68 
+sid
+ += 1
+
+69 
+tšdex
+ != -1:
+
+70 
+£lf
+.
+Ãw£Á’û
+ +ğ("\t" + s–f.
+diù_·‰”n_Çme
+[
+Œ“id
+] + "#" + 
+	`¡r
+(
+diù_šdex_id
+[
+tšdex
+]è+ ":" + sŒ(diù_šdex_id[tšdex + 
+maxËngth
+]))
+
+71 
+®Êew£Á’û
+.
+	$­³nd
+(
+£lf
+.
+Ãw£Á’û
+)
+
+72 #´šˆ
+®Êew£Á’û
+
+
+73 
+£lf
+.
+ouut
+.
+	$­³nd
+(
+®Êew£Á’û
+)
+
+75 
+def
+ 
+	$g’Ouut
+(
+£lf
+,
+ouutfe
+,
+wr™equ”li¡
+):
+
+76 
+fw
+ = 
+codecs
+.
+	`İ’
+(
+ouutfe
+,'w','gb18030')
+
+77 
+li¡šdex
+,
+£Á’ûli¡
+ 
+š
+ 
+	$’um”©e
+(
+£lf
+.
+ouut
+):
+
+78 
+£Á’ûšdex
+,
+£Á’û
+ 
+š
+ 
+	$’um”©e
+(
+£Á’ûli¡
+):
+
+79 
+£Á’û
+ = s’‹nû.
+	`»¶aû
+(£Á’û.
+	`¥l™
+("\t")[0],
+wr™equ”li¡
+[0][
+£Á’ûšdex
+])
+
+80 
+fw
+.
+	`wr™e
+(
+£Á’û
+ + "\n")
+
+	@match_lexicon/Trie.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+3 
+şass
+ 
+	$Tr›
+(
+objeù
+):
+
+4 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+5 
+£lf
+.
+roÙ
+ = 
+	$diù
+()
+
+6 
+£lf
+.
+END
+ = '\0'
+
+8 
+def
+ 
+	$š£¹
+(
+£lf
+, 
+¡ršg
+):
+
+9 
+¡ršg
+ == '\0':
+
+10 
+šdex
+, 
+node
+, 
+»tuº_šdex
+, 
+»tuº_æag
+ = 
+£lf
+.
+	$fšdLa¡Node
+(
+¡ršg
+)
+
+11 #´šˆ
+šdex
+,
+node
+
+
+12 
+š
+ 
+¡ršg
+[
+šdex
+:]:
+
+13 
+node
+òode.
+	`£tdeçuÉ
+(,{
+	}
+})
+
+14 
+	gnode
+[
+£lf
+.
+END
+] = 
+NÚe
+
+
+16 
+def
+ 
+	$fšd
+(
+£lf
+, 
+¡ršg
+):
+
+17 
+šdex
+, 
+node
+, 
+»tuº_šdex
+, 
+»tuº_æag
+ = 
+£lf
+.
+	$fšdLa¡Node
+(
+¡ršg
+)
+
+18 #´šˆ
+šdex
+,
+£lf
+.
+END
+,£lf.END 
+š
+ 
+node
+
+
+19 #ià
+£lf
+.
+END
+ 
+š
+ 
+node
+:
+
+20 #´šˆ
+šdex
+,
+	`»´
+(
+node
+).
+	`decode
+('unicode-escape')
+
+21 #šdex =ğ
+	`Ën
+(
+¡ršg
+è
+ªd
+
+
+22  
+»tuº_æag
+,
+»tuº_šdex
+
+
+24 
+def
+ 
+	$fšdLa¡Node
+(
+£lf
+, 
+¡ršg
+):
+
+25 
+node
+ = 
+£lf
+.
+roÙ
+
+
+26 
+šdex
+ = 0
+
+27 
+»tuº_æag
+ = 
+F®£
+
+
+28 
+»tuº_šdex
+ = -1
+
+29 
+šdex
+ < 
+	$Ën
+(
+¡ršg
+):
+
+30 ğ
+¡ršg
+[
+šdex
+]
+
+32 
+šdex
+ += 1
+
+33 
+»tuº_šdex
+ = 
+šdex
+
+
+35 !ğ'' 
+	$ªd
+ (
+š
+ 
+node
+):
+
+36 
+node
+ =‚ode[]
+
+37 
+£lf
+.
+END
+ 
+š
+ 
+node
+:
+
+38 
+»tuº_æag
+ = 
+True
+
+
+39 
+»tuº_šdex
+ = 
+šdex
+ + 1
+
+42 
+šdex
+ += 1
+
+43  (
+šdex
+, 
+node
+, 
+»tuº_šdex
+, 
+»tuº_æag
+)
+
+45 
+def
+ 
+	$´štT»e
+(
+£lf
+, 
+node
+, 
+Ïy”
+):
+
+46 
+node
+ =ğ
+NÚe
+:
+
+48 
+»s
+ = []
+
+49 
+™ems
+ = 
+	`sÜ‹d
+(
+node
+.
+	`™ems
+(), 
+key
+=
+Ïmbda
+ 
+x
+:x[0])
+
+50 
+»s
+.
+	$­³nd
+(
+™ems
+[0][0])
+
+51 
+»s
+.
+	`­³nd
+(
+£lf
+.
+	`´štT»e
+(
+™ems
+[0][1], 
+Ïy”
++1))
+
+52 
+™em
+ 
+š
+ 
+™ems
+[1:]:
+
+53 
+»s
+.
+	`­³nd
+('.' * 
+Ïy”
+)
+
+54 
+»s
+.
+	$­³nd
+(
+™em
+[0])
+
+55 
+»s
+.
+	`­³nd
+(
+£lf
+.
+	`´štT»e
+(
+™em
+[1], 
+Ïy”
++1))
+
+56  ''.
+	$još
+(
+»s
+)
+
+58 
+def
+ 
+	$__¡r__
+(
+£lf
+):
+
+60 #´šˆ
+£lf
+.
+	`´štT»e
+(£lf.
+roÙ
+, 0).
+	`’code
+('gb2312')
+
+61  
+	`unicode
+(
+£lf
+.
+	`´štT»e
+(£lf.
+roÙ
+, 0)).
+	`’code
+('utf-8')
+
+	@match_lexicon/mainfun.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+2 
+impÜt
+ 
+os
+
+
+3 
+impÜt
+ 
+codecs
+
+
+4 
+impÜt
+ 
+¿ndom
+
+
+5 
+impÜt
+ 
+lšeÿche
+
+
+6 
+impÜt
+ 
+sys
+
+
+7 
+äom
+ 
+P©‹ºM©ch
+ 
+impÜt
+ PatternMatch
+
+10 
+def
+ 
+	$g‘D©a
+(
+roÙdœ
+):
+
+11 
+d©®i¡
+ = []
+
+12 
+fes
+ = 
+os
+.
+	$li¡dœ
+(
+roÙdœ
+)
+
+13 
+ids
+ = 
+	`¡r
+(
+fes
+[0]).
+	`šdex
+('_')
+
+14 
+fes
+.
+	`sÜt
+(
+key
+ğ
+Ïmbda
+ 
+x
+:(x[
+ids
++1:-4]))
+
+15 
+fe
+ 
+š
+ 
+fes
+:
+
+16 
+d©a
+ = []
+
+17 
+·th
+ = 
+os
+.·th.
+	$još
+(
+roÙdœ
+, 
+fe
+)
+
+18 
+´št
+ 
+·th
+
+
+19 
+f
+ = 
+codecs
+.
+	`İ’
+(
+·th
+, "r", 'gb18030', 
+”rÜs
+='ignore')
+
+20 
+lše
+ 
+š
+ 
+f
+.
+	`»adlšes
+()[:]:
+
+21 
+d©a
+.
+	`­³nd
+(
+lše
+.
+	`¡r
+("\r\n"))
+
+22 
+d©®i¡
+.
+	$­³nd
+(
+d©a
+)
+
+23  
+d©®i¡
+
+
+26 
+def
+ 
+	$g‘D©a2
+(
+f’ame
+):
+
+27 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+, 'r', 'gb18030', 
+”rÜs
+ = 'ignore')
+
+28 
+d©a
+ = []
+
+29 
+lše
+ 
+š
+ 
+f
+.
+	$»adlšes
+():
+
+30 
+d©a
+.
+	`­³nd
+(
+lše
+.
+	`¡r
+("\r\n"))
+
+31  
+d©a
+
+
+33 
+def
+ 
+	$wÜd2pšyš
+(
+lše
+):
+
+34 
+ns
+ = ""
+
+35 
+wÜd
+ 
+š
+ 
+lše
+.
+	$¡r
+():
+
+36 
+wÜd
+ 
+š
+ 
+pšyšdiù
+:
+
+37 
+ns
+ +ğ
+pšyšdiù
+[
+wÜd
+]
+
+39 
+ns
+ +ğ
+wÜd
+
+
+40  
+ns
+
+
+42 
+def
+ 
+	$g‘D©a3
+(
+¿wfe
+,
+Ãwfe
+,
+pšyšdiù
+):
+
+43 
+f1
+ = 
+codecs
+.
+	`İ’
+(
+¿wfe
+,'r','gb18030',
+”rÜs
+ = 'ignore')
+
+44 
+f2
+ = 
+codecs
+.
+	`İ’
+(
+Ãwfe
+,'w','gb18030',
+”rÜs
+ = 'ignore')
+
+45 
+d©a
+ = []
+
+46 
+lše
+ 
+š
+ 
+f1
+.
+	$»adlšes
+():
+
+47 
+ns
+ = 
+	$wÜd2pšyš
+(
+lše
+)
+
+48 
+d©a
+.
+	$­³nd
+(
+ns
+)
+
+49 
+f2
+.
+	`wr™e
+(
+ns
+ + "\n")
+
+50  
+d©a
+
+
+52 
+def
+ 
+	$do_fun
+(
+qu”yli¡
+,
+¿wbËli¡
+,
+diù_·‰”n_Çme
+,
+fwr™”
+,
+wœ‹qu”li¡
+):
+
+53 
+´št
+ "read done"
+
+54 
+pm
+ = 
+	$P©‹ºM©ch
+(
+qu”yli¡
+, 
+¿wbËli¡
+, 
+diù_·‰”n_Çme
+)
+
+55 
+´št
+ "init done"
+
+56 
+pm
+.
+	$¿wbËProûss
+()
+
+57 
+´št
+ "trie done"
+
+58 
+pm
+.
+	$m©chQu”y
+()
+
+59 
+´št
+ "mathch done"
+
+60 
+pm
+.
+	$g’Ouut
+(
+fwr™”
+,
+wœ‹qu”li¡
+)
+
+62 
+def
+ 
+	$combše_fe
+(
+f1Çme
+,
+f2Çme
+,
+fwÇme
+):
+
+63 
+fw
+ = 
+codecs
+.
+	`İ’
+(
+fwÇme
+,'w','gb18030')
+
+64 
+šdex
+,
+lše
+ 
+š
+ 
+	`’um”©e
+(
+codecs
+.
+	`İ’
+(
+f1Çme
+,'r','gb18030',
+”rÜs
+ = 'ignore')):
+
+65 
+ns
+ = ""
+
+66 
+lše2
+ = 
+lšeÿche
+.
+	`g‘lše
+(
+f2Çme
+,
+šdex
+ + 1)
+
+67 
+tmps
+ 
+š
+ 
+lše
+.
+	`¡r
+().
+	`¥l™
+("\t"):
+
+68 
+ns
+ +ğ
+tmps
+ + "\t"
+
+69 
+tmps
+ 
+š
+ 
+lše2
+.
+	`¡r
+().
+	`¥l™
+("\t")[1:]:
+
+70 
+ns
+ +ğ
+tmps
+ + "\t"
+
+71 
+ns
+ =‚s.
+	`¡r
+() + "\n"
+
+72 
+fw
+.
+	$wr™e
+(
+ns
+)
+
+73 
+os
+.
+·th
+.
+	$exi¡s
+(
+f1Çme
+):
+
+74 
+os
+.
+	$»move
+(
+f1Çme
+)
+
+75 
+os
+.
+·th
+.
+	$exi¡s
+(
+f2Çme
+):
+
+76 
+os
+.
+	$»move
+(
+f2Çme
+)
+
+78 
+__Çme__
+ == '__main__':
+
+79 
+fqu”y
+ = 
+sys
+.
+¬gv
+[1]
+
+80 
+qu”yli¡_™em
+ = 
+	$g‘D©a2
+(
+fqu”y
+)
+
+81 
+qu”yli¡
+ = []
+
+82 
+qu”yli¡
+.
+	$­³nd
+(
+qu”yli¡_™em
+)
+
+83 
+fwr™”
+ = 
+sys
+.
+¬gv
+[2]
+
+84 
+diù_·‰”n_Çme
+ = {
+	}
+}
+
+85 
+·‰”n_út
+ = -1
+
+86 
+¿wbËli¡
+ = []
+
+87 
+pšyš_roÙ
+ = 
+sys
+.
+¬gv
+[3] + "_pinyin"
+
+88 
+nÙ
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+pšyš_roÙ
+):
+
+89 
+os
+.
+	$makedœs
+(
+pšyš_roÙ
+)
+
+90 
+İrgc
+ = 
+sys
+.
+¬gv
+[4]
+
+91 
+diù_·‰”n_Çme_pšyš
+ = {
+	}
+}
+
+92 
+pšyšdiù
+ = {}
+
+93 
+¿wbËli¡_pšyš
+ = []
+
+94 
+lše
+ 
+š
+ 
+codecs
+.
+İ’
+("./pšyšMod–.sšgË",'r','gb18030').
+	$»adlšes
+():
+
+95 
+wÜd
+ = 
+lše
+.
+	`¡r
+().
+	`¥l™
+(" ")[0]
+
+96 
+pšyš
+ = 
+lše
+.
+	`¡r
+().
+	`¥l™
+(" ")[1]
+
+97 
+pšyšdiù
+[
+wÜd
+] = 
+pšyš
+
+
+98 
+fqu”y_pšyš
+ = 
+fqu”y
+.
+	`¥l™
+(".")[0] + "_pinyin." + fquery.split(".")[1]
+
+99 
+qu”yli¡_™em_pšyš
+ = 
+	$g‘D©a3
+(
+fqu”y
+,
+fqu”y_pšyš
+,
+pšyšdiù
+)
+
+100 
+qu”yli¡_pšyš
+ = []
+
+101 
+qu”yli¡_pšyš
+.
+	$­³nd
+(
+qu”yli¡_™em_pšyš
+)
+
+102 
+roÙ
+, 
+dœs
+, 
+fes
+ 
+š
+ 
+os
+.
+	$w®k
+(
+sys
+.
+¬gv
+[3]):
+
+103 
+f
+ 
+š
+ 
+fes
+:
+
+104 
+nÙ
+ 
+f
+.
+	`’dsw™h
+("snt"):
+
+106 
+¬g
+ = 
+os
+.
+·th
+.
+	$još
+(
+roÙ
+, 
+f
+)
+
+107 
+·‰”n_út
+ += 1
+
+108 
+¿wbË
+ = 
+	$g‘D©a2
+(
+¬g
+)
+
+109 
+¿wbËli¡
+.
+	$­³nd
+(
+¿wbË
+)
+
+110 
+diù_·‰”n_Çme
+[
+·‰”n_út
+] = 
+¬g
+.
+	`¥l™
+("/")[-1].split(".")[0]
+
+111 
+¬g2
+ = 
+os
+.
+·th
+.
+	`još
+(
+pšyš_roÙ
+,
+f
+.
+	`¥l™
+(".")[0] + "_pinyin." + f.split(".")[1])
+
+112 
+¿wbË_pšyš
+ = 
+	$g‘D©a3
+(
+¬g
+,
+¬g2
+,
+pšyšdiù
+)
+
+113 
+¿wbËli¡_pšyš
+.
+	$­³nd
+(
+¿wbË_pšyš
+)
+
+114 
+diù_·‰”n_Çme_pšyš
+[
+·‰”n_út
+] = 
+¬g2
+.
+	`¥l™
+("/")[-1].split(".")[0]
+
+115 if(
+İrgc
+ == "zhongwen"):
+
+116 
+Ãwfw
+ = 
+fwr™”
+
+
+117 
+	$do_fun
+(
+qu”yli¡
+,
+¿wbËli¡
+,
+diù_·‰”n_Çme
+,
+Ãwfw
+,querylist)
+
+118 
+	`–if
+ (
+İrgc
+ == "pinyin"):
+
+119 
+Ãwfw
+ = 
+fwr™”
+
+
+120 
+	$do_fun
+(
+qu”yli¡_pšyš
+,
+¿wbËli¡_pšyš
+, 
+diù_·‰”n_Çme_pšyš
+,
+Ãwfw
+,
+qu”yli¡
+)
+
+122 
+Ãwfw1
+ = 
+fwr™”
+ + "_" + "zhongwen"
+
+123 
+	$do_fun
+(
+qu”yli¡
+,
+¿wbËli¡
+,
+diù_·‰”n_Çme
+,
+Ãwfw1
+,querylist)
+
+124 
+Ãwfw2
+ = 
+fwr™”
+ + "_" + "pinyin"
+
+125 
+	$do_fun
+(
+qu”yli¡_pšyš
+,
+¿wbËli¡_pšyš
+, 
+diù_·‰”n_Çme_pšyš
+,
+Ãwfw2
+,
+qu”yli¡
+)
+
+126 
+	$combše_fe
+(
+Ãwfw1
+,
+Ãwfw2
+,
+fwr™”
+)
+
+127 #pm.
+	`g’Newdomaš
+(
+domaš_Çme
+, 
+g’”©e_numb”_fÜ_—ch_£Á’û
+)
+
+	@news/newdomain/do.py
+
+1 
+impÜt
+ 
+sys
+
+
+2 
+impÜt
+ 
+codecs
+
+
+3 
+	g__Çme__
+ == '__main__':
+
+4 
+äÇme
+ = 
+sys
+.
+¬gv
+[1]
+
+5 
+fwÇme
+ = 
+sys
+.
+¬gv
+[2]
+
+6 
+ä
+ = 
+codecs
+.
+İ’
+(
+äÇme
+,'r','gb2312',
+”rÜs
+='ignore')
+
+7 
+fw
+ = 
+codecs
+.
+İ’
+(
+fwÇme
+,'w','gb2312',
+”rÜs
+='ignore')
+
+8 
+lše
+ 
+š
+ 
+ä
+.
+	$»adlšes
+():
+
+9 
+lše¥l™
+ = 
+lše
+.
+	`¥l™
+(" ")
+
+10 
+£Á’û
+ = 
+	$¡r
+(
+lše¥l™
+[0])
+
+11 #´šˆ
+£Á’û
+
+
+12 
+ii
+ 
+š
+ 
+lše¥l™
+[1:]:
+
+13 
+i
+ 
+š
+ 
+ii
+:
+
+14 
+£Á’û
+ +ğ(" " + 
+i
+)
+
+15 
+fw
+.
+	`wr™e
+(
+£Á’û
+)
+
+	@process1.py
+
+1 #-*- 
+codšg
+:
+utf8
+ -*-
+
+2 
+impÜt
+ 
+os
+
+
+3 
+impÜt
+ 
+m¬i§_Œ›
+
+
+4 
+impÜt
+ 
+codecs
+
+
+5 
+impÜt
+ 
+¿ndom
+
+
+6 
+impÜt
+ 
+lšeÿche
+
+
+7 
+def
+ 
+	$wr™e2fe
+(
+æag
+,
+feid
+,
+m‘hod
+,
+¡ršg
+):
+
+9 #´šˆ
+feid
+,
+	`ty³
+(
+¡ršg
+)
+
+10 
+f’ame
+ = "E:\\code\\d©amig¿tiÚ\\Ãwdomaš\\Ãwdomaš_" + 
+m‘hod
+ + 
+feid
+ + ".txt"
+
+11 
+æag
+ =ğ1 
+ªd
+ 
+os
+.
+·th
+.
+	$exi¡s
+(
+f’ame
+):
+os
+.
+	$»move
+(
+f’ame
+)
+
+12 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'a','gb2312')
+
+13 
+f
+.
+	`wr™e
+(
+¡ršg
+.
+	`decode
+('utf8') + "\n")
+
+14 
+def
+ 
+	$»adäomfe
+(
+feid
+,
+lšeút
+):
+
+15 
+f’ame
+ = "E:\\code\\d©amig¿tiÚ\\ÃwbË\\ÃwbË" + 
+feid
+ + ".txt"
+
+16 
+f
+ = 
+codecs
+.
+	`İ’
+(
+f’ame
+,'r','gb2312')
+
+17 
+tmp¡r
+ = ""
+
+18 #´šˆ
+lšeút
+,
+¿ndomlše
+
+
+19 #´šˆ
+f’ame
+
+
+20 
+Œy
+:
+
+21 
+¿ndomlše
+ = 
+¿ndom
+.
+	$¿nd¿nge
+(1,
+lšeút
+)
+
+22 
+tmp¡r
+ = (
+lšeÿche
+.
+	`g‘lše
+(
+f’ame
+,
+¿ndomlše
+).
+	`decode
+('gb2312').
+	`’code
+('utf8')).
+	`r¡r
+("\n")
+
+24 
+exû±
+ 
+Exû±iÚ
+ 
+as
+ 
+e
+:
+
+25 
+·ss
+
+
+27 #´šˆ
+tmp¡r
++"sdf"
+
+28  
+tmp¡r
+
+
+30 
+şass
+ 
+Tr›
+:
+
+31 
+def
+ 
+	$__š™__
+(
+£lf
+):
+
+32 
+£lf
+.
+roÙ
+ = 
+	$diù
+()
+
+33 
+£lf
+.
+END
+ = '%'
+
+34 
+def
+ 
+	$š£¹
+(
+£lf
+, 
+¡ršg
+):
+
+36 #´šˆ
+¡ršg
+
+
+37 
+šdex
+, 
+node
+ = 
+£lf
+.
+	$fšdLa¡Node
+(
+¡ršg
+)
+
+39 #´šˆ
+šdex
+,
+node
+
+
+40 
+š
+ 
+¡ršg
+[
+šdex
+:]:
+
+41 
+node
+òode.
+	`£tdeçuÉ
+(,{
+	}
+})
+
+42 
+	gnode
+[
+£lf
+.
+END
+] = 
+NÚe
+
+
+44 
+def
+ 
+	$fšd
+(
+£lf
+, 
+¡ršg
+):
+
+45 #´šˆ
+¡ršg
+
+
+46 
+šdex
+, 
+node
+ = 
+£lf
+.
+	$fšdLa¡Node
+(
+¡ršg
+)
+
+47 #´šˆ
+šdex
+,
+£lf
+.
+END
+,£lf.END 
+š
+ 
+node
+
+
+48 #ià
+£lf
+.
+END
+ 
+š
+ 
+node
+:
+
+49 #´šˆ
+šdex
+,
+	`»´
+(
+node
+).
+	`decode
+('unicode-escape')
+
+50 #šdex =ğ
+	`Ën
+(
+¡ršg
+è
+ªd
+
+
+51  
+£lf
+.
+END
+ 
+š
+ 
+node
+,
+šdex
+
+
+52 
+def
+ 
+	$fšdLa¡Node
+(
+£lf
+, 
+¡ršg
+):
+
+53 #´šˆ
+¡ršg
+
+
+54 
+node
+ = 
+£lf
+.
+roÙ
+
+
+55 
+šdex
+ = 0
+
+56 
+šdex
+ < 
+	$Ën
+(
+¡ršg
+):
+
+57 ğ
+¡ršg
+[
+šdex
+]
+
+58 !ğ'' 
+	$ªd
+ (
+š
+ 
+node
+):
+
+59 
+node
+ =‚ode[]
+
+62 
+šdex
+ += 1
+
+63  (
+šdex
+, 
+node
+)
+
+64 
+def
+ 
+	$´štT»e
+(
+£lf
+, 
+node
+, 
+Ïy”
+):
+
+65 
+node
+ =ğ
+NÚe
+:
+
+67 
+»s
+ = []
+
+68 
+™ems
+ = 
+	`sÜ‹d
+(
+node
+.
+	`™ems
+(), 
+key
+=
+Ïmbda
+ 
+x
+:x[0])
+
+69 
+»s
+.
+	$­³nd
+(
+™ems
+[0][0])
+
+70 
+»s
+.
+	`­³nd
+(
+£lf
+.
+	`´štT»e
+(
+™ems
+[0][1], 
+Ïy”
++1))
+
+71 
+™em
+ 
+š
+ 
+™ems
+[1:]:
+
+72 
+»s
+.
+	`­³nd
+('.' * 
+Ïy”
+)
+
+73 
+»s
+.
+	$­³nd
+(
+™em
+[0])
+
+74 
+»s
+.
+	`­³nd
+(
+£lf
+.
+	`´štT»e
+(
+™em
+[1], 
+Ïy”
++1))
+
+75  ''.
+	$još
+(
+»s
+)
+
+76 
+def
+ 
+	$__¡r__
+(
+£lf
+):
+
+78 #´šˆ
+£lf
+.
+	`´štT»e
+(£lf.
+roÙ
+, 0).
+	`’code
+('gb2312')
+
+79  
+	`unicode
+(
+£lf
+.
+	`´štT»e
+(£lf.
+roÙ
+, 0)).
+	`’code
+('utf-8')
+
+81 
+şass
+ 
+	$P©‹ºM©ch
+(
+objeù
+):
+
+83 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+qu”yli¡
+, 
+¿wbË
+, 
+ÃwbË
+):
+
+84 
+	`su³r
+(
+P©‹ºM©ch
+, 
+£lf
+).
+	$__š™__
+()
+
+85 
+£lf
+.
+qu”li¡
+ = 
+qu”yli¡
+
+
+86 
+£lf
+.
+¿wbË
+ =„awtable
+
+87 
+£lf
+.
+ÃwbË
+ =‚ewtable
+
+88 
+def
+ 
+	$¿wbËProûss
+(
+£lf
+):
+
+89 
+£lf
+.
+¿wŒ›
+ = []
+
+90 
+bË
+ 
+š
+ 
+£lf
+.
+¿wbË
+:
+
+91 
+	`Ën
+(
+bË
+è=ğ0 
+Ü
+able == '\n':
+
+92 
+Œ“
+ = 
+	$Tr›
+()
+
+93 
+wÜds
+ 
+š
+ 
+bË
+:
+
+94 
+Œ“
+.
+	`š£¹
+(
+wÜds
+.
+	`¡r
+("\r\n"))
+
+95 
+£lf
+.
+¿wŒ›
+.
+	$­³nd
+(
+Œ“
+)
+
+96 
+d–
+ 
+Œ“
+
+
+97 #´šˆ
+£lf
+.
+¿wŒ›
+[3]
+
+98 
+def
+ 
+	$m©chQu”y
+(
+£lf
+):
+
+99 
+£lf
+.
+Ãwdomaš
+ = []
+
+100 
+qu”yid
+ = 0
+
+101 
+qu”y
+ 
+š
+ 
+£lf
+.
+qu”li¡
+:
+
+102 
+´št
+ 
+qu”yid
+
+
+103 
+qu”yid
+ += 1
+
+104 
+qu”yút
+ = 0
+
+105 #´šˆ
+	`»´
+(
+qu”y
+).
+	`decode
+('unicode-escape'),
+
+106 
+®Êew£Á’û
+ = []
+
+107 
+£Á’û
+ 
+š
+ 
+qu”y
+:
+
+108 #´šˆ
+qu”yút
+
+
+109 
+qu”yút
+ += 1
+
+110 
+sšdex
+ = 0
+
+111 
+Ãw£Á’û
+ = []
+
+112 
+£Á’û
+ = s’‹nû.
+	`r¡r
+("\r\n")
+
+113 
+£Á’ûæag
+ = 0
+
+114 
+sšdex
+ < 
+	$Ën
+(
+£Á’û
+):
+
+115 
+sub£Á’û
+ = 
+£Á’û
+[
+sšdex
+:]
+
+116 #´šˆ
+sub£Á’û
+[:-1],
+
+117 #´šˆ
+sub£Á’û
+
+
+118 
+id
+ = -1
+
+119 
+maxËngth
+ = 0
+
+120 
+Œ“id
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+¿wŒ›
+)):
+
+121 #´šˆ
+£lf
+.
+¿wŒ›
+[
+Œ“id
+]
+
+122 
+æag
+,
+šdex
+ = 
+£lf
+.
+¿wŒ›
+[
+Œ“id
+].
+	$fšd
+(
+sub£Á’û
+)
+
+123 
+æag
+ =ğ
+True
+ 
+ªd
+ 
+šdex
+ > 
+maxËngth
+:
+
+124 
+maxËngth
+ = 
+šdex
+
+
+125 
+id
+ = 
+Œ“id
+
+
+126 
+id
+ == -1:
+
+127 
+Ãw£Á’û
+.
+	$­³nd
+(
+sub£Á’û
+[0])
+
+128 
+sšdex
+ += 1
+
+130 
+£Á’ûæag
+ = 1
+
+131 
+Ãw£Á’û
+.
+	`­³nd
+("[["+
+	`¡r
+(
+id
+)+"]]")
+
+132 
+sšdex
+ +ğ
+	$max
+(1,
+maxËngth
+)
+
+133 #´šˆ
+sub£Á’û
+,
+æag
+,
+šdex
+,
+maxËngth
+,
+	`»´
+(
+Ãw£Á’û
+).
+	`decode
+('unicode-escape')
+
+134 
+£Á’ûæag
+:
+
+135 
+®Êew£Á’û
+.
+	$­³nd
+(
+Ãw£Á’û
+)
+
+137 
+®Êew£Á’û
+.
+	`­³nd
+("!@#$%^&*()_+")
+
+138 #´šˆ
+	`»´
+(
+®Êew£Á’û
+).
+	`decode
+('unicode-escape')
+
+139 
+£lf
+.
+Ãwdomaš
+.
+	$­³nd
+(
+®Êew£Á’û
+)
+
+140 
+def
+ 
+	$g’Newdomaš
+(
+£lf
+,
+út
+):
+
+142 
+domašid
+ 
+š
+ 
+	`¿nge
+(
+	$Ën
+(
+£lf
+.
+Ãwdomaš
+)):
+
+143 
+´št
+ 
+domašid
+
+
+144 
+d–‘eæag
+ = 0
+
+146 
+£Á’û
+ 
+š
+ 
+£lf
+.
+Ãwdomaš
+[
+domašid
+]:
+
+147 
+d–‘eæag
+ += 1
+
+148 
+£Á’û
+ == "!@#$%^&*()_+":
+
+149 
+	`wr™e2fe
+(
+d–‘eæag
+, 
+	`¡r
+(
+domašid
++1), "Œ›", 
+£Á’û
+)
+
+151 
+nowút
+ = 0
+
+152 #´šˆ
+	`»´
+(
+£Á’û
+).
+	`decode
+('unicode-escape')
+
+153 
+nowút
+ < 
+út
+:
+
+154 
+nowút
+ += 1
+
+155 
+Ãw£Á’û
+ =""
+
+156 
+·‰”n
+ = ""
+
+157 
+wÜd
+ 
+š
+ 
+£Á’û
+:
+
+158 
+·‰”n
+ +ğ
+wÜd
+.
+	`’code
+('utf8')
+
+159 #´šˆ
+wÜd
+
+
+160 
+wÜd
+.
+	`¡¬tsw™h
+("[["):
+
+161 #´šˆ"*******" + 
+wÜd
+
+
+162 
+feid
+ = 
+wÜd
+[2]
+
+163 #´šˆ(
+feid
+)+1
+
+164 
+ÃwbËwÜd
+ = 
+	`»adäomfe
+(
+	`¡r
+((
+feid
+)),
+	`Ën
+(
+£lf
+.
+ÃwbË
+[(fileid)]))
+
+165 #´šˆ(
+ÃwbËwÜd
+)
+
+166 #´šˆ
+	`ty³
+(
+ÃwbËwÜd
+)
+
+168 #´šˆ
+	`ty³
+(
+wÜd
+)
+
+169 
+ÃwbËwÜd
+ = 
+wÜd
+.
+	`’code
+('utf8')
+
+170 #´šˆ
+	`ty³
+(
+ÃwbËwÜd
+)
+
+171 #´šˆ
+ÃwbËwÜd
+
+
+172 
+Ãw£Á’û
+ +ğ
+ÃwbËwÜd
+
+
+173 #´šˆ
+Ãw£Á’û
+
+
+174 
+	`wr™e2fe
+(
+d–‘eæag
+, 
+	`¡r
+(
+domašid
++1), "Œ›", 
+Ãw£Á’û
+)
+
+175 
+d–‘eæag
+ += 1
+
+176 #´šˆ
+	`»´
+(
+£Á’û
+).
+	`decode
+('unicode-escape')
+
+178 
+şass
+ 
+	$G¿mm¬AÇlysis
+(
+objeù
+):
+
+180 
+def
+ 
+	$__š™__
+(
+£lf
+, 
+qu”yli¡
+, 
+¿wbË
+, 
+ÃwbË
+):
+
+181 
+	`su³r
+(
+G¿mm¬AÇlysis
+, 
+£lf
+).
+	$__š™__
+()
+
+182 
+£lf
+.
+qu”li¡
+ = 
+qu”yli¡
+
+
+183 
+£lf
+.
+¿wbË
+ =„awtable
+
+184 
+£lf
+.
+ÃwbË
+ =‚ewtable
+
+186 
+def
+ 
+	$g‘Qu”y
+(
+roÙdœ
+):
+
+187 
+qu”yli¡
+ = []
+
+188 
+fe
+ 
+š
+ 
+os
+.
+	$li¡dœ
+(
+roÙdœ
+):
+
+189 
+qu”y
+ = []
+
+190 
+·th
+ = 
+os
+.·th.
+	$još
+(
+roÙdœ
+,
+fe
+)
+
+191 
+f
+ = 
+codecs
+.
+	`İ’
+(
+·th
+,"r",'gb2312',
+”rÜs
+='ignore')
+
+192 #´šˆ
+·th
+
+
+193 #ià
+·th
+.
+	`’dsw™h
+("1.txt"):
+
+194 
+lše
+ 
+š
+ 
+f
+.
+	$»adlšes
+():
+
+195 #´šˆ
+lše
+
+
+196 
+qu”y
+.
+	`­³nd
+(
+lše
+.
+	`¡r
+("\r\n"))
+
+197 
+qu”yli¡
+.
+	$­³nd
+(
+qu”y
+)
+
+198  
+qu”yli¡
+
+
+199 
+def
+ 
+	$g‘RawbË
+(
+roÙdœ
+):
+
+200 
+¿wbË
+ = []
+
+201 
+fe
+ 
+š
+ 
+os
+.
+	$li¡dœ
+(
+roÙdœ
+):
+
+202 
+bË
+ = []
+
+203 
+·th
+ = 
+os
+.·th.
+	$još
+(
+roÙdœ
+,
+fe
+)
+
+204 #´šˆ
+·th
+
+
+205 
+f
+ = 
+codecs
+.
+	`İ’
+(
+·th
+,"r",'gb2312',
+”rÜs
+='ignore')
+
+206 
+lše
+ 
+š
+ 
+f
+.
+	$»adlšes
+():
+
+207 
+bË
+.
+	`­³nd
+(
+lše
+.
+	`¡r
+("\r\n"))
+
+208 
+¿wbË
+.
+	$­³nd
+(
+bË
+)
+
+209  
+¿wbË
+
+
+210 
+def
+ 
+	$g‘NewbË
+(
+roÙdœ
+):
+
+211 
+ÃwbË
+ = []
+
+212 
+fe
+ 
+š
+ 
+os
+.
+	$li¡dœ
+(
+roÙdœ
+):
+
+213 
+bË
+ = []
+
+214 
+·th
+ = 
+os
+.·th.
+	$još
+(
+roÙdœ
+,
+fe
+)
+
+215 #´šˆ
+·th
+
+
+216 
+f
+ = 
+codecs
+.
+	`İ’
+(
+·th
+,"r",'gb2312')
+
+217 
+lše
+ 
+š
+ 
+f
+.
+	$»adlšes
+():
+
+218 
+bË
+.
+	`­³nd
+(
+lše
+.
+	`¡r
+("\r\n"))
+
+219 
+ÃwbË
+.
+	$­³nd
+(
+bË
+)
+
+220  
+ÃwbË
+
+
+222 
+__Çme__
+ == '__main__':
+
+223 
+´e¡ršg
+ = "E:\code\datamigration"
+
+224 
+qu”yli¡
+ = 
+	`g‘Qu”y
+(
+´e¡ršg
+ + "\\query\\")
+
+225 
+¿wbË
+ = 
+	`g‘RawbË
+(
+´e¡ršg
+ + "\\rawtable\\")
+
+226 
+ÃwbË
+ = 
+	`g‘NewbË
+(
+´e¡ršg
+ + "\\newtable\\")
+
+227 #fÜ 
+i
+ 
+š
+ 
+¿wbË
+:
+
+228 #fÜ 
+j
+ 
+š
+ 
+i
+ :
+
+229 #´šˆ
+j
+
+
+231 #pm = 
+	`P©‹ºM©ch
+(
+qu”yli¡
+, 
+¿wbË
+, 
+ÃwbË
+)
+
+233 #pm.
+	`¿wbËProûss
+()
+
+235 #pm.
+	`m©chQu”y
+()
+
+237 #pm.
+	`g’Newdomaš
+(1)
+
+239 #g¨ğ
+	`G¿mm¬AÇlysis
+(
+qu”yli¡
+, 
+¿wbË
+, 
+ÃwbË
+)
+
+	@temp/do.py
+
+1 
+impÜt
+ 
+os
+
+
+2 
+impÜt
+ 
+sys
+
+
+3 
+impÜt
+ 
+codecs
+
+
+4 
+	g__Çme__
+ == '__main__':
+
+5 
+äÇme
+ = 
+sys
+.
+¬gv
+[1]
+
+6 
+fwÇme
+ = 
+sys
+.
+¬gv
+[2]
+
+7 
+ä
+ = 
+codecs
+.
+İ’
+(
+äÇme
+,'r','gb2312',
+”rÜs
+='ignore')
+
+8 
+fw
+ = 
+codecs
+.
+İ’
+(
+fwÇme
+,'w','gb2312')
+
+9 
+lše
+ 
+š
+ 
+	gä
+.
+	$»adlšes
+():
+
+10 
+lše¥l™
+ = 
+lše
+.
+	`¥l™
+(" ")
+
+11 
+£Á’û
+ = 
+lše¥l™
+[0] + " "
+
+12 
+£Á’û
+ +ğ"".
+	$još
+(
+lše¥l™
+[1:])
+
+13 #´šˆ
+£Á’û
+
+
+14 
+fw
+.
+	`wr™e
+(
+£Á’û
+)
+
+	@
+1
+.
+0
+11
+186
+FileProcess.py
+PatternMatch.py
+Trie.py
+dataprocess.py
+mainfun.py
+match_lexicon/PatternMatch.py
+match_lexicon/Trie.py
+match_lexicon/mainfun.py
+news/newdomain/do.py
+process1.py
+temp/do.py
